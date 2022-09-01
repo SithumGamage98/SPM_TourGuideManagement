@@ -10,13 +10,15 @@ const PORT = process.env.PORT || 8070;
 
 const PackageRouter = require("./routes/packages.js")
 const paymentRouter = require('./routes/payment-route');
+const paymentHistoryRouter = require('./routes/payment-history-route')
 
 app.use(cors());
 app.use(bodyParser.json());
 
 //routes to make api calls
-app.use("/package",PackageRouter);
+app.use("/package", PackageRouter);
 app.use("/payment", paymentRouter);
+app.use("/payments/history", paymentHistoryRouter);
 
 const URL = process.env.MONGODB_URL;
 
