@@ -11,6 +11,8 @@ const PORT = process.env.PORT || 8070;
 const PackageRouter = require("./routes/packages.js")
 const paymentRouter = require('./routes/payment-route');
 const paymentHistoryRouter = require('./routes/payment-history-route')
+const hotelRouter = require ("./routes/hotels.js");
+const roomRouter = require ("./routes/rooms.js");
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -19,6 +21,8 @@ app.use(bodyParser.json());
 app.use("/package", PackageRouter);
 app.use("/payment", paymentRouter);
 app.use("/payments/history", paymentHistoryRouter);
+app.use("/hotel", hotelRouter)
+app.use("/room", roomRouter)
 
 const URL = process.env.MONGODB_URL;
 
