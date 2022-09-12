@@ -5,14 +5,14 @@ const router = express.Router();
 
 //store new users data in the database
 router.route("/new").post((req,res) => {
-    const first_name = req.body.first_name;
-    const last_name = req.body.last_name;
+    const user_name = req.body.user_name;
+    const full_name = req.body.full_name;
     const email = req.body.email;
     const password = req.body.password;
 
     const newUser = new user({
-        first_name,
-        last_name,
+        user_name,
+        full_name,
         email,
         password
     });
@@ -26,14 +26,14 @@ router.route("/new").post((req,res) => {
 
 router.put("/update/:id", (req,res) => {
     const _id = req.params.id;
-    const first_name = req.body.first_name;
-    const last_name = req.body.last_name;
+    const user_name = req.body.user_name;
+    const full_name = req.body.full_name;
     const email = req.body.email;
     const password = req.body.password;
 
     const update = {
-        first_name,
-        last_name,
+        user_name,
+        full_name,
         email,
         password
     }
@@ -56,11 +56,23 @@ router.delete("/delete/:id", (req,res) => {
 });
 
 //Get a single record from the database
-//TODO try "/:id" as the route when testing
-router.route("/get/:id").get((req,res) => {
+router.route("/:id").get((req,res) => {
     user.findOne({_id: req.params.id})
-        .then(payment => res.json({payment}))
+        .then(user => res.json({user}))
         .catch(err => res.status(400).json('Error : '+err));
 });
+
+//Returns true if a user is available under given username or else returns false
+router.route("/available/:username").get((req,res) => {
+    user.find({user_name: req.params.username})
+        .then((user) => {
+            if(user.length){
+                res.json("There is a user under that name");
+            }else {
+                res.json("No luck bud");
+            }
+        })
+        .catch(err => res.status(400).json('Error : '+err));
+})
 
 module.exports = router;
