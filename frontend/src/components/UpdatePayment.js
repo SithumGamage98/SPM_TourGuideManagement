@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 
 //import css file from style sheets directory
 import styles from "../style_sheets/Payment.module.css";
@@ -8,7 +7,7 @@ import styles from "../style_sheets/Payment.module.css";
 //Import components from the component directory
 import Profile from "./Profile";
 
-const UpdatePayment = () => {
+const UpdatePayment = (props) => {
   const [data, setData] = useState([]);
   const [card_num, setCardNum] = useState(data.card_num);
   const [full_name, setFullName] = useState(data.full_name);
@@ -20,16 +19,13 @@ const UpdatePayment = () => {
   const [zip_code, setZip] = useState(data.zip_code);
   const [state, setState] = useState(data.state);
 
-  //TODO create user related functions and replace this with props.user.id
-  const id = 150;
-
   useEffect(() => {
     retrieveData();
   }, []);
 
   const retrieveData = () => {
     axios
-      .get(`http://localhost:8070/payment/get/${id}`)
+      .get(`http://localhost:8070/payment/get/${props.userId}`)
       .then((response) => {
         console.log(response.data);
         setData(response.data.payment);
@@ -55,19 +51,20 @@ const UpdatePayment = () => {
     };
 
     axios
-      .put(`http://localhost:8070/payment/update/${id}`, updatedData)
+      .put(`http://localhost:8070/payment/update/${props.userId}`, updatedData)
       .then(() => {
         console.log("Updated");
+        props.history.push(`/view/payment+details/${props.userId}`);
       })
       .catch((err) => {
-        alert(err);
+        console.log(err);
       });
   };
 
   return (
     <div className={styles.maincontainer}>
         <div className={styles.side_bar}>
-            <Profile/>
+            <Profile {...props} userId={props.userId}/>
         </div>
         <div className={styles.container}>
             <div className={styles.innercontainer}>
@@ -410,10 +407,6 @@ const UpdatePayment = () => {
                                     setState(e.target.value);
                                 }}
                             />
-                            {/* <select id="inputState" className="form-control">
-                                <option selected>Choose...</option>
-                                <option>...</option>
-                            </select> */}
                         </div>
                         <div className="form-group col-md-3">
                             <label for="inputZip" className={styles.label} style={{marginBottom: "5px"}}>Zip</label>

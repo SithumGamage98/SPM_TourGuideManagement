@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { useHistory, BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 //import css file from style sheets directory
@@ -12,10 +12,23 @@ import logo from "./img/logo.jpg";
 import AddPayment from "./components/AddPayment";
 import DisplayPayment from "./components/DisplayPayment";
 import UpdatePayment from "./components/UpdatePayment";
-import Profile from "./components/Profile";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
+import UserProfile from "./components/UserProfile";
 
 const App = () => {
-  const user = "james";
+  const [userId, setUserId] = React.useState(null);
+
+  const history = useHistory();
+
+  async function login(userId = null) {
+    setUserId(userId);
+  }
+
+  async function logout() {
+    setUserId(null);
+    history.push('/');
+  }
 
   return (
     <Router>
@@ -38,33 +51,46 @@ const App = () => {
                   <a href="#contact">Tour guides</a>
                 </li>
                 <li>
-                  <Link to={"/profile/home/:id"}>Profile</Link>
+                  <Link to={`/profile/home/${userId}`}>Profile</Link>
                 </li>
               </ul>
             </div>
-            {user ? (
-              <a href="#" className={styles.btn_login}>
-                Logout
-              </a>
+            {userId ? (
+              <>
+                <button onClick={logout} className={styles.btn_login}>Logout</button>
+              </>
             ) : (
-              <a href="#" className="btn btn-primary">
-                Login
-              </a>
+              <>
+                <Link to={"/user/login"} className={styles.btn_login}>Login</Link>
+              </>
             )}
           </div>
         </nav>
         <div>
           <Switch>
-            <Route path="/add/payment+details" component={AddPayment} />
+            <Route path="/add/payment+details"
+              render={(props) => <AddPayment {...props} userId={userId} />}
+              />
             <Route
-              path="/view/payment+details/:id"
-              component={DisplayPayment}
+              path={`/view/payment+details/${userId}`}
+              render={(props) => <DisplayPayment {...props} userId={userId} />}
             />
             <Route
-              path="/update/payment+details/:id"
-              component={UpdatePayment}
+              path={`/update/payment+details/${userId}`}
+              render={(props) => <UpdatePayment {...props} userId={userId} />}
             />
-            <Route path="/profile/home/:id" component={Profile} />
+            <Route
+              path={`/profile/home/${userId}`}
+              render={(props) => <UserProfile {...props} userId={userId} />}
+            />
+            <Route
+              path="/new+user/signup"
+              component={Signup} 
+            />
+            <Route
+              path="/user/login"
+              render={(props) => <Login {...props} login={login} />}
+            />
           </Switch>
         </div>
       </div>

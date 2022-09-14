@@ -8,9 +8,10 @@ import styles from "../style_sheets/Payment.module.css";
 //Import components from the component directory
 import Profile from "./Profile";
 
-const AddPayment = () => {
+const AddPayment = (props) => {
   const [card_num, setCardNum] = useState("");
-  const [user_id, setUserId] = useState(150);
+  //removed setUserId suggested by sonarqube
+  const [user_id] = useState(props.userId);
   const [full_name, setFullName] = useState("");
   const [cvv, setCvv] = useState("");
   const [expiry_date, setExpiryDate] = useState("");
@@ -40,16 +41,17 @@ const AddPayment = () => {
       .post("http://localhost:8070/payment/add", newCard)
       .then(() => {
         console.log("Added");
+        props.history.push(`/view/payment+details/${props.userId}`)
       })
       .catch((err) => {
-        alert(err);
+        console.log(err);
       });
   };
 
   return (
     <div className={styles.maincontainer}>
         <div className={styles.side_bar}>
-            <Profile/>
+            <Profile {...props} userId={props.userId}/>
         </div>
         <div className={styles.container}>
             <div className={styles.innercontainer}>
