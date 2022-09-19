@@ -1,5 +1,7 @@
 .maincontainer {
     display: flex;
+    margin-left: 300px;
+    min-height: calc(100vh - 80px);
 }
 
 .side_bar {
@@ -8,12 +10,13 @@
 }
 
 .container {
-    height: auto;
+    height: fit-content;
     width: 1300px;
     min-width: 800px;
     background-color: white;
     position: relative;
     margin: auto;
+    padding-top: 20px;
     border-radius: 15px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
@@ -104,4 +107,74 @@ hr.divider {
     font-weight: 500;
     color: #585555;
     opacity: 0.9;
+}
+
+.search {
+    width: 800px;
+    height: 40px;
+    border-color: #8A888833;
+    border-radius: 10px 0px 0px 10px;
+    padding-left: 20px;
+}
+
+.search:focus {
+    outline-color: #4468E233;;
+}
+
+.searchBtn {
+    width: 200px;
+    height: 40px;
+    border-color: #4468E200;
+    border-radius: 0px 10px 10px 0px;
+    background-color: #4468E2;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 1px;
+    padding-top: 2px;
+}
+
+.tableContainer {
+    max-width: 1200px;
+    min-width: 600px;
+    min-height: 500px;
+    position: relative;
+    margin: auto;
+}
+
+.searchContainer {
+    margin: 40px 0px 40px 0px;
+}
+
+.table {
+    border-radius: 10px;
+    width: 100%;
+    text-align: start;
+}
+
+.tableHead {
+    background-color: #F7F7F7;
+    color: #585555B3;
+    border-radius: 15px;
+}
+
+.tableContent {
+    padding: 20px 0px 15px 40px;
+    width: auto;
+    border-bottom:1px solid #A3A8A84D;
+}
+
+.printBtn {
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    width: 100px;
+    margin-right: 40px;
+    padding: 8px 20px 10px 20px;
+    border-radius: 5px;
+    background-color: #4468E233;
+}
+
+.printBtn:hover {
+    text-decoration: none;
+    color: black;
 }

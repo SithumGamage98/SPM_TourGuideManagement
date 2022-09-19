@@ -49,12 +49,12 @@ const Profile = (props) => {
                         </Link>
                     </div>
                     <div className="list-group list-group-flush mx-3 mt-4">
-                        <Link to="#" className={styles.sidelinks}>
+                        <Link to={`/view/payment+history/${props.userId}`} className={styles.sidelinks}>
                             Payment History
                         </Link>
                     </div>
                     <div className="list-group list-group-flush mx-3 mt-4">
-                        <Link to="#" className={styles.sidelinks}>
+                        <Link to="/print/payment+history" className={styles.sidelinks}>
                             Monthly Report
                         </Link>
                     </div>

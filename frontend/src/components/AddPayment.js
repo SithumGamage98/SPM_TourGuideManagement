@@ -56,7 +56,7 @@ const AddPayment = (props) => {
         <div className={styles.container}>
             <div className={styles.innercontainer}>
             <div className="horizontal-center">
-                <h2 className={`text-center margin-bottom ${styles.headertext}`}><strong>Add a new card</strong></h2>
+                <h2 className={`text-center margin-bottom ${styles.headertext}`}>Add a new card</h2>
                 <hr className={styles.divider} style={{ marginTop: "25px", marginBottom: "0px"}}/>
                 <br></br>
                 <form className="formt" style={{margin: "0px 50px 0px 50px"}} onSubmit={createData}>

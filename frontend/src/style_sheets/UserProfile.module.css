@@ -1,5 +1,7 @@
 .maincontainer {
     display: flex;
+    margin-left: 300px;
+    min-height: calc(100vh - 80px);
 }
 
 .side_bar {
@@ -8,12 +10,46 @@
 }
 
 .container {
-    height: auto;
+    height: fit-content;
     width: 1300px;
     min-width: 800px;
     background-color: white;
     position: relative;
     margin: auto;
+    padding: 20px;
     border-radius: 15px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.nocard{
+    position: relative;
+    margin: auto;
+    width: auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 30px 80px 30px 80px;
+}
+
+.illustration {
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 55px;
+}
+
+.btn_update {
+    text-decoration: none;
+    font-weight: 500;
+    background-color: white;
+    color: #4468E2;
+    padding: 4px 25px 4px 25px;
+    margin-right:12px;
+    outline-style: auto;
+    outline-color: #4468E2;
+}
+
+.btn_update:hover {
+    color: white;
+    font-weight: 500;
+    background-color: #4468E2;
 }
