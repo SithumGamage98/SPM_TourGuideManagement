@@ -18,6 +18,9 @@ import UserProfile from "./components/UserProfile";
 import PaymentHistory from "./components/PaymentHistory";
 import PrintPayments from "./components/PrintPayment";
 import Checkout from "./components/Checkout";
+import AddTourguide from './components/AddTourguide';
+import AllTourguides from './components/AllTourguides';
+import updateTourguide from './components/UpdateTourguide';
 
 const App = () => {
   const [userId, setUserId] = React.useState(null);
@@ -48,11 +51,11 @@ const App = () => {
                 </li>
 
                 <li>
-                  <a href="#contact">Tour Packages</a>
+                  <Link to={`/add`}>Tour Guide</Link>
                 </li>
 
                 <li>
-                  <a href="#contact">Tour guides</a>
+                  <a href="#contact">Tour Packages</a>
                 </li>
 
                 <li>
@@ -117,6 +120,21 @@ const App = () => {
             <Route
               path={`/checkout/${userId}`}
               render={(props) => <Checkout {...props} userId={userId} />}
+            />
+
+            <Route 
+              path= {["/all"]}
+              component = {AllTourguides}
+            />
+
+            <Route 
+              path= {["/add"]}
+              component = {AddTourguide} 
+            />
+
+            <Route 
+              path= {["/update/:id"]}
+              component = {updateTourguide} 
             />
 
           </Switch>
