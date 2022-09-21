@@ -21,6 +21,12 @@ import Checkout from "./components/Checkout";
 import AddTourguide from './components/AddTourguide';
 import AllTourguides from './components/AllTourguides';
 import updateTourguide from './components/UpdateTourguide';
+import AddPackage from './components/addPackage';
+import AllPacks from './components/AllPacks';
+import EditPack from './components/PackUpdate'
+
+
+
 
 const App = () => {
   const [userId, setUserId] = React.useState(null);
@@ -51,7 +57,7 @@ const App = () => {
                 </li>
 
                 <li>
-                  <Link to={`/add`}>Tour Guide</Link>
+                  <Link to={`/add/tourguide`}>Tour Guide</Link>
                 </li>
 
                 <li>
@@ -128,11 +134,26 @@ const App = () => {
             />
 
             <Route 
-              path= {["/add"]}
+              path= {["/add/tourguide"]}
               component = {AddTourguide} 
             />
 
             <Route 
+              path= {["/update/:id"]}
+              component = {updateTourguide} 
+            />
+
+<Route 
+              path= {["/add/package"]}
+              component = {AddPackage} 
+            />
+
+<Route 
+              path= {["/update/:id"]}
+              component = {updateTourguide} 
+            />
+
+<Route 
               path= {["/update/:id"]}
               component = {updateTourguide} 
             />
