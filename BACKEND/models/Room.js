@@ -14,10 +14,7 @@ const roomSchema = new Schema({
         
     },
 
-    type:{
-        type: String,
-        required: true
-    },
+  
     
 
     // photos:{

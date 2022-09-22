@@ -97,14 +97,38 @@ router.route("/update/:id").put(async(req, res)=>{
         })
     })
 
-    router.route("/get/:id").get(async(req, res)=>{
-        let hotelId = req.params.id;
+    // router.route("/get/:id").get(async(req, res)=>{
+    //     let hotelId = req.params.id;
+    //     const hotel = await Hotel.findById(hotelId)
+    //     .then(()=>{
+    //         res.status(200).send({status: "hotel fetched", hotel: hotel})
+    //     }).catch(()=>{
+    //         console.log(err.message)
+    //         res.status(500).send({status: "Error with get user", error: err.message});
+    //     })
+    // })
+    router.route("/get/:id").get(async(req,res)=>{
+
+        let hotelId =req.params.id;
         const hotel = await Hotel.findById(hotelId)
-        .then(()=>{
-            res.status(200).send({status: "hotel fetched", hotel: hotel})
-        }).catch(()=>{
-            console.log(err.message)
-            res.status(500).send({status: "Error with get user", error: err.message});
-        })
-    })
+        
+         .then((hotel)=>{
+        
+          res.status(200).send({status: "hotel fetched",hotel})
+        
+         }).catch((err)=> {
+        
+        console.log(err.message);
+        res.status(500).send({status: "Error with get Tour Package",error: err.message});  
+        
+        
+         })
+        
+        
+        
+        }) 
+        
+        
+        
+
 module.exports = router;

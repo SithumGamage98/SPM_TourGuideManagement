@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { aggregate } = require("../models/Room");
 let Room = require("../models/Room");
 
-router.route("/add").post((req, res)=>{
+router.route("/insert").post((req, res)=>{
     
     const check_in_date= req.body.check_in_date;
     const check_out_date= req.body.check_out_date;
@@ -13,7 +13,6 @@ router.route("/add").post((req, res)=>{
     const newRoom = new Room({
         check_in_date,
         check_out_date,
-        type,
         no_of_guest ,
         no_of_rooms
 

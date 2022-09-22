@@ -1,0 +1,92 @@
+.body{
+   background-color: rgb(255, 255, 255);
+   color: rgb(0, 0, 0);
+   font-family: poppinsregular;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 115px;
+}
+
+.header1{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.title1{
+   flex-direction: column;
+   line-height: 10px;
+}
+
+
+
+/* #inscreva-se-btn{
+   border: 2px solid rgb(132, 14, 201);
+   padding: 10px;
+   border-radius: 15px;
+}
+
+#inscreva-se-btn:hover{
+   background-color: rgb(132, 14, 201);
+   color: white;
+} */
+
+.ha{
+   font-weight: 200;
+}
+
+.main2{
+   display: flex;
+   flex-direction: row;
+   margin-top: 50px;
+}
+
+.hb{
+   font-size: 56px;
+   line-height: 30px;
+   font-family: poppinsmedium;
+   padding: 0 0 50px;
+}
+
+.span1{
+   color: rgb(16, 90, 180);
+}
+
+.p1{
+   line-height: 20px;
+   max-width: 500px;
+   font-family: poppinslight;
+}
+
+img{
+   width: 580px;
+}
+
+.form1{
+   display: flex;
+   flex-direction: column;
+   width: 70%;
+}
+
+.form1 [type="submit"]{
+   height: 50px;
+   width: 50%;
+   background-color: rgb(79, 120, 255);
+   color: white;
+   font-weight: bold;
+}
+.form1 [type="submit"]:hover{
+   cursor: pointer;
+}
+
+.inputBtn{
+ 
+   font-size: 15px;
+
+   padding: 10px;
+   border-radius: 15px;
+   background-color: rgb(48, 92, 237);
+   color: white;
+   text-decoration: none;
+}

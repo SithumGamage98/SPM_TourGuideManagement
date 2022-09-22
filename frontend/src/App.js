@@ -23,6 +23,13 @@ import AllTourguides from './components/AllTourguides';
 import updateTourguide from './components/UpdateTourguide';
 import AddPackage from './components/addPackage';
 import AllPacks from './components/AllPacks';
+import AddHotel from "./components/AddHotel";
+import BookingHotel from "./components/BookingHotel";
+import Navbar from "./components/Navbar";
+import AllHotel from "./components/AllHotel";
+import EditHotel from "./components/EditHotel";
+import ViewHotel from "./components/ViewHotel";
+import report from "./components/report";
 import EditPack from './components/PackUpdate'
 
 
@@ -129,7 +136,7 @@ const App = () => {
             />
 
             <Route 
-              path= {["/all"]}
+              path= {["/all/tourguide"]}
               component = {AllTourguides}
             />
 
@@ -139,24 +146,38 @@ const App = () => {
             />
 
             <Route 
-              path= {["/update/:id"]}
+              path= {["/update/tourguide/:id"]}
               component = {updateTourguide} 
             />
 
-<Route 
+            <Route 
               path= {["/add/package"]}
               component = {AddPackage} 
             />
 
-<Route 
-              path= {["/update/:id"]}
+            <Route 
+              path= {["/update/tourguide/:id"]}
               component = {updateTourguide} 
             />
 
-<Route 
-              path= {["/update/:id"]}
+            <Route 
+              path= {["/update/tourguide/:id"]}
               component = {updateTourguide} 
             />
+
+            <Route exact path={["/admin/hotel"]} component={Navbar} />
+
+            <Route exact path={["/add/hotel"]} component={AddHotel} />
+
+            <Route exact path={["/all/hotel"]} component={AllHotel} />
+
+            <Route exact path="/update/hotel/:id" component={EditHotel} />
+
+            <Route exact path={["/print/hotel"]} component={report} />
+
+            <Route exact path={["/view/hotel"]} component={ViewHotel} />
+            
+            <Route exact path={["/insert/hotel"]} component={BookingHotel} />
 
           </Switch>
         </div>
