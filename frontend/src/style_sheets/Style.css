@@ -1,4 +1,4 @@
-/* 
+
 
 .form-control{
   border-radius: 20px;
@@ -36,10 +36,24 @@
 
 }
 
-.header{
+
+.header2{
 
    background-color: #4468E2;
-   color:white;
+   border-radius: 15px;
+   width: 1500px;
+   height:80px;
+  
+
+
+
+}
+
+.header{
+
+   
+   color:rgb(255, 255, 255);
+   
    width:1600px;
 }
 
@@ -106,6 +120,34 @@
 
   
 } 
+
+.btnSubmit{
+
+
+  background-color: #4619d8;
+  border-radius: 30px;
+  border-width: 7;
+  box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  text-align: center;
+  height: 30px;
+  padding: 0 25px;
+  transition: all 200ms;
+  position:absolute;
+  right:580px;
+  height:40px;
+  width:20px;
+
+
+
+
+
+
+}
 
 
 
@@ -288,4 +330,4 @@ right:100px;
 
 
 
-} */
+} 
