@@ -4,7 +4,7 @@ import moment from "moment";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 //import css file from style sheets directory
-import styles from "../style_sheets/Payment.module.css";
+import stylesPaymentHistory from "../style_sheets/Payment.module.css";
 
 //Import components from the component directory
 import Profile from "./Profile";
@@ -40,23 +40,23 @@ const PaymentHistory = (props) => {
     };
 
     return (
-        <div className={styles.maincontainer}>
-            <div className={styles.side_bar}>
+        <div className={stylesPaymentHistory.maincontainer}>
+            <div className={stylesPaymentHistory.side_bar}>
                 <Profile {...props} userId={props.userId}/>
             </div>
-            <div className={styles.container}>
-                <div className={`text-center ${styles.searchContainer}`}>
-                    <input placeholder="Search By Name" type="search" name="searchTerm" className={styles.search} onChange={handleTextSearch}/><button className={styles.searchBtn}>Search</button>
+            <div className={stylesPaymentHistory.container}>
+                <div className={`text-center ${stylesPaymentHistory.searchContainer}`}>
+                    <input placeholder="Search By Name" type="search" name="searchTerm" className={stylesPaymentHistory.search} onChange={handleTextSearch}/><button className={stylesPaymentHistory.searchBtn}>Search</button>
                 </div>
-                <div className={`text-center ${styles.tableContainer}`}>
-                    <table className={`${styles.table}`}>
+                <div className={`text-center ${stylesPaymentHistory.tableContainer}`}>
+                    <table className={`${stylesPaymentHistory.table}`}>
 
-                        <thead className={styles.tableHead}>
+                        <thead className={stylesPaymentHistory.tableHead}>
                             <tr>
-                                <th className={styles.tableContent} scope="col">Order ID</th>
-                                <th className={styles.tableContent} scope="col">Service Name</th>
-                                <th className={styles.tableContent} scope="col">Amount Paid</th>
-                                <th className={styles.tableContent} scope="col">Date</th>
+                                <th className={stylesPaymentHistory.tableContent} scope="col">Order ID</th>
+                                <th className={stylesPaymentHistory.tableContent} scope="col">Service Name</th>
+                                <th className={stylesPaymentHistory.tableContent} scope="col">Amount Paid</th>
+                                <th className={stylesPaymentHistory.tableContent} scope="col">Date</th>
                             </tr>
                         </thead>
                     
@@ -64,10 +64,10 @@ const PaymentHistory = (props) => {
                             data.map((data) => (
                             <tbody>
                                 <tr>
-                                    <td className={styles.tableContent}>{data._id}</td>
-                                    <td className={styles.tableContent}>{data.service_name}</td>
-                                    <td className={styles.tableContent}>{data.amount_paid}</td>
-                                    <td className={styles.tableContent}>{moment(data.date).format('YYYY-MM-DD')}</td>
+                                    <td className={stylesPaymentHistory.tableContent}>{data._id}</td>
+                                    <td className={stylesPaymentHistory.tableContent}>{data.service_name}</td>
+                                    <td className={stylesPaymentHistory.tableContent}>{data.amount_paid}</td>
+                                    <td className={stylesPaymentHistory.tableContent}>{moment(data.date).format('YYYY-MM-DD')}</td>
                                 </tr>
                             </tbody>
                         ))) : (

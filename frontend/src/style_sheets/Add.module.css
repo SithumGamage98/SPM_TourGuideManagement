@@ -1,13 +1,11 @@
-
-
-
-*{
+/* Same here ane, All.module.css eke wgema mketh *{} dammama hmathanma wens wnwa */
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
   
- }
+ } */
 
  .body{
     position: relative;
@@ -190,10 +188,9 @@
 /* main box */
 
  .Main1{
-    margin-top: 20px;
     background: #EAF2FF;
     min-height: 90vh;
-    padding: 1rem;
+    padding: 1.5rem;
  }
 
  .dashboardCard{

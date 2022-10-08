@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 //import css file from style sheets directory
-import styles from "../style_sheets/Payment.module.css";
+import stylesUpdatePayments from "../style_sheets/Payment.module.css";
 
 //Import components from the component directory
 import Profile from "./Profile";
@@ -62,20 +62,20 @@ const UpdatePayment = (props) => {
   };
 
   return (
-    <div className={styles.maincontainer}>
-        <div className={styles.side_bar}>
+    <div className={stylesUpdatePayments.maincontainer}>
+        <div className={stylesUpdatePayments.side_bar}>
             <Profile {...props} userId={props.userId}/>
         </div>
-        <div className={styles.container}>
-            <div className={styles.innercontainer}>
+        <div className={stylesUpdatePayments.container}>
+            <div className={stylesUpdatePayments.innercontainer}>
             <div className="horizontal-center">
-                <h2 className={`text-center margin-bottom ${styles.headertext}`}>Update Details</h2>
-                <hr className={styles.divider} style={{ marginTop: "25px", marginBottom: "0px"}}/>
+                <h2 className={`text-center margin-bottom ${stylesUpdatePayments.headertext}`}>Update Details</h2>
+                <hr className={stylesUpdatePayments.divider} style={{ marginTop: "25px", marginBottom: "0px"}}/>
                 <br></br>
                 <form className="formt" style={{margin: "0px 50px 0px 50px"}} onSubmit={updateData}>
                     <div className="row" style={{marginTop: "15px"}}>
                         <div className="form-group col-md-6">
-                            <label for="inputName" className={styles.label} style={{marginBottom: "5px"}}>Full Name</label>
+                            <label for="inputName" className={stylesUpdatePayments.label} style={{marginBottom: "5px"}}>Full Name</label>
                             <input type="text" className="form-control" id="inputName" defaultValue={data.full_name}
                                 onChange={(e)=> {
                                     setFullName(e.target.value);
@@ -83,7 +83,7 @@ const UpdatePayment = (props) => {
                             />
                         </div>
                         <div className="form-group col-md-6">
-                            <label for="inputCard" className={styles.label} style={{marginBottom: "5px"}}>Card Number</label>
+                            <label for="inputCard" className={stylesUpdatePayments.label} style={{marginBottom: "5px"}}>Card Number</label>
                             <input type="text" className="form-control" id="inputCard" pattern="\d*" defaultValue={data.card_num}
                                 onChange={(e)=> {
                                     setCardNum(e.target.value);
@@ -93,7 +93,7 @@ const UpdatePayment = (props) => {
                     </div>
                     <div className="row" style={{marginTop: "20px", marginBottom: "40px"}}>
                         <div className="form-group col-md-3">
-                            <label for="inputExpiryDate" className={styles.label} style={{marginBottom: "5px"}}>Expiry Date</label>
+                            <label for="inputExpiryDate" className={stylesUpdatePayments.label} style={{marginBottom: "5px"}}>Expiry Date</label>
                             <input type="text" className="form-control" id="inputExpiryDate" defaultValue={data.expiry_date}
                                 onChange={(e)=> {
                                     setExpiryDate(e.target.value);
@@ -101,7 +101,7 @@ const UpdatePayment = (props) => {
                             />
                         </div>
                         <div className="form-group col-md-3">
-                            <label for="inputCvv" className={styles.label} style={{marginBottom: "5px"}}>Cvv</label>
+                            <label for="inputCvv" className={stylesUpdatePayments.label} style={{marginBottom: "5px"}}>Cvv</label>
                             <input type="text" className="form-control" id="inputCvv" defaultValue={data.cvv}
                                 onChange={(e)=> {
                                     setCvv(e.target.value);
@@ -115,7 +115,7 @@ const UpdatePayment = (props) => {
                         <br></br>
                         <div className="row" style={{marginTop: "0px"}}>
                             <div className="form-group col-md-7">
-                                <label for="inputStreet" className={styles.label} style={{marginBottom: "5px"}}>Street Address</label>
+                                <label for="inputStreet" className={stylesUpdatePayments.label} style={{marginBottom: "5px"}}>Street Address</label>
                                 <input type="text" className="form-control" id="inputStreet" defaultValue={data.street_address}
                                     onChange={(e)=> {
                                         setStreetAddress(e.target.value);
@@ -123,13 +123,13 @@ const UpdatePayment = (props) => {
                                 />
                             </div>
                             <div className="form-group col-md-5">
-                                <label for="inputCountry" className={styles.label} style={{marginBottom: "5px"}}>Country</label>
+                                <label for="inputCountry" className={stylesUpdatePayments.label} style={{marginBottom: "5px"}}>Country</label>
                                 {/* <input type="text" className="form-control" id="inputCountry" defaultValue={data.country}
                                     onChange={(e)=> {
                                         setCountry(e.target.value);
                                     }}
                                 /> */}
-                                <div className={styles.dropdown}>
+                                <div className={stylesUpdatePayments.dropdown}>
                                     <select id="inputState" className="form-control" value={data.country}
                                         onChange={(e) => {
                                             setCountry(e.target.value);
@@ -393,7 +393,7 @@ const UpdatePayment = (props) => {
                         </div>
                         <div className="row" style={{marginTop: "20px", marginBottom: "40px"}}>
                         <div className="form-group col-md-5">
-                            <label for="inputCity" className={styles.label} style={{marginBottom: "5px"}}>City</label>
+                            <label for="inputCity" className={stylesUpdatePayments.label} style={{marginBottom: "5px"}}>City</label>
                             <input type="text" className="form-control" id="inputCity" defaultValue={data.city}
                                 onChange={(e)=> {
                                     setCity(e.target.value);
@@ -401,7 +401,7 @@ const UpdatePayment = (props) => {
                             />
                         </div>
                         <div className="form-group col-md-4">
-                            <label for="inputState" className={styles.label} style={{marginBottom: "5px"}}>State</label>
+                            <label for="inputState" className={stylesUpdatePayments.label} style={{marginBottom: "5px"}}>State</label>
                             <input type="text" className="form-control" id="inputState" defaultValue={data.state}
                                 onChange={(e)=> {
                                     setState(e.target.value);
@@ -409,7 +409,7 @@ const UpdatePayment = (props) => {
                             />
                         </div>
                         <div className="form-group col-md-3">
-                            <label for="inputZip" className={styles.label} style={{marginBottom: "5px"}}>Zip</label>
+                            <label for="inputZip" className={stylesUpdatePayments.label} style={{marginBottom: "5px"}}>Zip</label>
                             <input type="text" className="form-control" id="inputZip" defaultValue={data.zip_code}
                                 onChange={(e)=> {
                                     setZip(e.target.value);
@@ -419,7 +419,7 @@ const UpdatePayment = (props) => {
                     </div>
                     </div>
                     <div className="text-center" style={{marginTop:"50px", marginBottom: "45px"}}>
-                        <button  type="submit" style={{width: "120px"}} className={styles.btn_update} onClick={updateData}>
+                        <button  type="submit" style={{width: "120px"}} className={stylesUpdatePayments.btn_update} onClick={updateData}>
                             Update
                         </button>
                     </div>

@@ -3,7 +3,7 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 //import css file from style sheets directory
-import styles from "../style_sheets/Payment.module.css";
+import stylesAddPayments from "../style_sheets/Payment.module.css";
 
 //Import components from the component directory
 import Profile from "./Profile";
@@ -49,20 +49,20 @@ const AddPayment = (props) => {
   };
 
   return (
-    <div className={styles.maincontainer}>
-        <div className={styles.side_bar}>
+    <div className={stylesAddPayments.maincontainer}>
+        <div className={stylesAddPayments.side_bar}>
             <Profile {...props} userId={props.userId}/>
         </div>
-        <div className={styles.container}>
-            <div className={styles.innercontainer}>
+        <div className={stylesAddPayments.container}>
+            <div className={stylesAddPayments.innercontainer}>
             <div className="horizontal-center">
-                <h2 className={`text-center margin-bottom ${styles.headertext}`}>Add a new card</h2>
-                <hr className={styles.divider} style={{ marginTop: "25px", marginBottom: "0px"}}/>
+                <h2 className={`text-center margin-bottom ${stylesAddPayments.headertext}`}>Add a new card</h2>
+                <hr className={stylesAddPayments.divider} style={{ marginTop: "25px", marginBottom: "0px"}}/>
                 <br></br>
                 <form className="formt" style={{margin: "0px 50px 0px 50px"}} onSubmit={createData}>
                     <div className="row" style={{marginTop: "15px"}}>
                         <div className="form-group col-md-6">
-                            <label for="inputName" className={styles.label} style={{marginBottom: "5px"}}>Full Name</label>
+                            <label for="inputName" className={stylesAddPayments.label} style={{marginBottom: "5px"}}>Full Name</label>
                             <input type="text" className="form-control" id="inputName" placeholder=""
                                 onChange={(e) => {
                                     setFullName(e.target.value);
@@ -70,7 +70,7 @@ const AddPayment = (props) => {
                             />
                         </div>
                         <div className="form-group col-md-6">
-                            <label for="inputCard" className={styles.label} style={{marginBottom: "5px"}}>Card Number</label>
+                            <label for="inputCard" className={stylesAddPayments.label} style={{marginBottom: "5px"}}>Card Number</label>
                             <input type="text" className="form-control" id="inputCard" pattern="\d*" placeholder=""
                                 onChange={(e) => {
                                     setCardNum(e.target.value);
@@ -80,7 +80,7 @@ const AddPayment = (props) => {
                     </div>
                     <div className="row" style={{marginTop: "20px", marginBottom: "40px"}}>
                         <div className="form-group col-md-3">
-                            <label for="inputExpiryDate" className={styles.label} style={{marginBottom: "5px"}}>Expiry Date</label>
+                            <label for="inputExpiryDate" className={stylesAddPayments.label} style={{marginBottom: "5px"}}>Expiry Date</label>
                             <input type="text" className="form-control" id="inputExpiryDate" placeholder=""
                                 onChange={(e) => {
                                     setExpiryDate(e.target.value);
@@ -88,7 +88,7 @@ const AddPayment = (props) => {
                             />
                         </div>
                         <div className="form-group col-md-3">
-                            <label for="inputCvv" className={styles.label} style={{marginBottom: "5px"}}>Cvv</label>
+                            <label for="inputCvv" className={stylesAddPayments.label} style={{marginBottom: "5px"}}>Cvv</label>
                             <input type="text" className="form-control" id="inputCvv" placeholder=""
                                 onChange={(e) => {
                                     setCvv(e.target.value);
@@ -102,7 +102,7 @@ const AddPayment = (props) => {
                         <br></br>
                         <div className="row" style={{marginTop: "0px"}}>
                             <div className="form-group col-md-7">
-                                <label for="inputStreet" className={styles.label} style={{marginBottom: "5px"}}>Street Address</label>
+                                <label for="inputStreet" className={stylesAddPayments.label} style={{marginBottom: "5px"}}>Street Address</label>
                                 <input type="text" className="form-control" id="inputStreet" placeholder=""
                                     onChange={(e) => {
                                         setStreetAddress(e.target.value);
@@ -110,13 +110,13 @@ const AddPayment = (props) => {
                                 />
                             </div>
                             <div className={`form-group col-md-5`}>
-                                <label for="inputCountry" className={styles.label} style={{marginBottom: "5px"}}>Country</label>
+                                <label for="inputCountry" className={stylesAddPayments.label} style={{marginBottom: "5px"}}>Country</label>
                                 {/* <input type="text" className="form-control" id="inputCountry" placeholder=""
                                     onChange={(e)=> {
                                         setCountry(e.target.value);
                                     }}
                                 /> */}
-                                <div className={styles.dropdown}>
+                                <div className={stylesAddPayments.dropdown}>
                                     <select id="inputState" className="form-control"
                                         onChange={(e) => {
                                             setCountry(e.target.value);
@@ -380,7 +380,7 @@ const AddPayment = (props) => {
                         </div>
                         <div className="row" style={{marginTop: "20px", marginBottom: "40px"}}>
                         <div className="form-group col-md-5">
-                            <label for="inputCity" className={styles.label} style={{marginBottom: "5px"}}>City</label>
+                            <label for="inputCity" className={stylesAddPayments.label} style={{marginBottom: "5px"}}>City</label>
                             <input type="text" className="form-control" id="inputCity"
                                 onChange={(e) => {
                                     setCity(e.target.value);
@@ -388,7 +388,7 @@ const AddPayment = (props) => {
                             />
                         </div>
                         <div className="form-group col-md-4">
-                            <label for="inputState" className={styles.label} style={{marginBottom: "5px"}}>State</label>
+                            <label for="inputState" className={stylesAddPayments.label} style={{marginBottom: "5px"}}>State</label>
                             <input type="text" className="form-control" id="inputState" placeholder=""
                                 onChange={(e) => {
                                     setState(e.target.value);
@@ -400,7 +400,7 @@ const AddPayment = (props) => {
                             </select> */}
                         </div>
                         <div className="form-group col-md-3">
-                            <label for="inputZip" className={styles.label} style={{marginBottom: "5px"}}>Zip</label>
+                            <label for="inputZip" className={stylesAddPayments.label} style={{marginBottom: "5px"}}>Zip</label>
                             <input type="text" className="form-control" id="inputZip"
                                 onChange={(e) => {
                                     setZip(e.target.value);
@@ -410,7 +410,7 @@ const AddPayment = (props) => {
                     </div>
                     </div>
                     <div className="text-center" style={{marginTop:"50px", marginBottom: "35px"}}>
-                        <button  type="submit" style={{width: "120px"}} className={styles.btn_update} onClick={createData}>
+                        <button  type="submit" style={{width: "120px"}} className={stylesAddPayments.btn_update} onClick={createData}>
                             Add
                         </button>
                     </div>

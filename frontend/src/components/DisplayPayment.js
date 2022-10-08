@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 //import css file from style sheets directory
-import styles from "../style_sheets/Payment.module.css";
+import styleDisplayPayments from "../style_sheets/Payment.module.css";
 
 //Import components from the component directory
 import Profile from "./Profile";
@@ -43,15 +43,15 @@ const DisplayPayment = (props) => {
   };
 
   return (
-    <div className={styles.maincontainer}>
-      <div className={styles.side_bar}>
+    <div className={styleDisplayPayments.maincontainer}>
+      <div className={styleDisplayPayments.side_bar}>
           <Profile {...props} userId={props.userId}/>
       </div>
       {data ? (
-        <div className={styles.container} style={{width: "1400px"}}>
-          <div className={styles.innercontainer}>
-            <h2 className={`text-center ${styles.headertext}`}>Payment Details</h2>
-            <hr className={styles.divider} style={{ marginTop: "35px", marginBottom: "-20px"}} /><br></br><br></br>
+        <div className={styleDisplayPayments.container} style={{width: "1400px"}}>
+          <div className={styleDisplayPayments.innercontainer}>
+            <h2 className={`text-center ${styleDisplayPayments.headertext}`}>Payment Details</h2>
+            <hr className={styleDisplayPayments.divider} style={{ marginTop: "35px", marginBottom: "-20px"}} /><br></br><br></br>
             <div className="text-center">
               <p>Card Number :</p>
               <p style={{ marginTop: "-12px", fontSize: "18px", fontWeight: "500", marginBottom: "25px" }}>{data.card_num}</p>
@@ -60,7 +60,7 @@ const DisplayPayment = (props) => {
               <p>Expiry Date :</p>
               <p style={{ marginTop: "-12px", fontSize: "18px", fontWeight: "500", marginBottom: "70px" }}>{data.expiry_date}</p>
             </div>
-            <h5 style={{marginLeft: "90px", marginBottom: "20px"}}>Billing Address</h5><hr className={styles.divider} style={{ marginTop: "10px" }} /><br></br>
+            <h5 style={{marginLeft: "90px", marginBottom: "20px"}}>Billing Address</h5><hr className={styleDisplayPayments.divider} style={{ marginTop: "10px" }} /><br></br>
             <div style={{ marginLeft: "90px", marginTop: "-30px" }}>
               <p style={{ fontSize: "18px", fontWeight: "400" }}>{data.full_name}</p>
               <p style={{ marginTop: "-10px", fontSize: "18px", fontWeight: "400" }}>{data.street_address},</p>
@@ -69,19 +69,19 @@ const DisplayPayment = (props) => {
               <p style={{ marginTop: "-10px", fontSize: "18px", fontWeight: "400" }}>{data.country}</p>
               <br></br>
             </div>
-            <div className={styles.btncontainer}>
+            <div className={styleDisplayPayments.btncontainer}>
               <Link to={`/update/payment+details/${props.userId}`}>
-              <button type="button" className={styles.btn_update}>Update</button>
+              <button type="button" className={styleDisplayPayments.btn_update}>Update</button>
               </Link>
-              <button onClick={deleteEntry} className={styles.btn_delete}>Delete</button>
+              <button onClick={deleteEntry} className={styleDisplayPayments.btn_delete}>Delete</button>
             </div>
           </div>
         </div>   
         ) : (
-          <div className={`text-center ${styles.nocard}`} style={{width: "1000px"}}>
-            <img src={illustration} alt="Logo" className={styles.illustration}/>
+          <div className={`text-center ${styleDisplayPayments.nocard}`} style={{width: "1000px"}}>
+            <img src={illustration} alt="Logo" className={styleDisplayPayments.illustration}/>
             <h4 className="text-center" style={{marginBottom: "30px"}}><strong>You don't have any card details added to the system</strong></h4>
-            <Link to={"/add/payment+details"} className={styles.btn_update} style={{marginTop: '20px', padding: "6px 40px 6px 40px"}}>Add</Link>
+            <Link to={"/add/payment+details"} className={styleDisplayPayments.btn_update} style={{marginTop: '20px', padding: "6px 40px 6px 40px"}}>Add</Link>
           </div>
         )}
     </div>

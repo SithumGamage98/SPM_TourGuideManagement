@@ -65,8 +65,6 @@
    border-radius: 12px;
 }
 
-
-
 .sidelinks:hover {
    color: #000000;
    background: #EAF2FF;
@@ -252,7 +250,6 @@
 }
 
 .activityCard {
-   /* background: #fff; */
    border-radius: 7px;
 }
 
@@ -276,7 +273,6 @@
    align-items: center;
 }
 
-/* <div style="border: 1px solid black; width: 40%; height: 350px; margin-top: 10px; margin-left: 5%; float: left;"></div> */
 .container {
    border: 15px;
    width: 40%;
@@ -338,9 +334,10 @@ body {
    background-color: #EAF2FF;
 }
 
-* {
+/* Oya mka mehma dammama mulu app ekma font ek wens wenwa nangi oyta ek danna one tkakta wna wnama danna blmu */
+/* * {
    font-family: sans-serif;
-}
+} */
 
 
 .content_table {
@@ -429,7 +426,6 @@ body {
    display: inline-block;
    padding: 10px 30px;
    margin: 15px 0;
-   /* color: #000; */
    text-decoration: none;
    text-transform: uppercase;
    font-size: 12px;
@@ -445,7 +441,6 @@ body {
    display: inline-block;
    padding: 10px 30px;
    margin: 15px 0;
-   /* color: #000; */
    text-decoration: none;
    text-transform: uppercase;
    font-size: 12px;

@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 //import css file from style sheets directory
@@ -9,6 +9,7 @@ import styles from "./style_sheets/App.module.css";
 import logo from "./img/logo.jpg";
 
 //Import components from the component directory
+import Home from "./components/Home";
 import AddPayment from "./components/AddPayment";
 import DisplayPayment from "./components/DisplayPayment";
 import UpdatePayment from "./components/UpdatePayment";
@@ -32,9 +33,6 @@ import ViewHotel from "./components/ViewHotel";
 import report from "./components/report";
 import EditPack from './components/PackUpdate'
 
-
-
-
 const App = () => {
   const [userId, setUserId] = React.useState(null);
 
@@ -48,7 +46,7 @@ const App = () => {
 
   return (
     <Router>
-      <div className="App min-vh-100">
+      <div className="App min-vh-100" style={{backgroundColor: "#f7f7f7"}}>
         <nav className={`navbar-fixed-top ${styles.nav}`}>
           <div className={`container ${styles.parentnav}`}>
             <img src={logo} alt="Travelo logo" className={styles.logo}></img>
@@ -56,11 +54,12 @@ const App = () => {
               <ul>
 
                 <li>
-                  <Link to={`/`}>Home</Link>
+                  <Link to={`/home`}>Home</Link>
                 </li>
 
                 <li>
-                  <Link to={`/checkout/${userId}`}>Hotels</Link>
+                  <Link to={`/landing/page`}>Hotels</Link>
+                  {/* <Link to={`/checkout/${userId}`}>Hotels</Link> */}
                 </li>
 
                 <li>
@@ -79,7 +78,7 @@ const App = () => {
             </div>
             {userId ? (
               <>
-                <Link to={'/'} onClick={logout} className={styles.btn_login}>Logout</Link>
+                <Link to={'/home'} onClick={logout} className={styles.btn_login}>Logout</Link>
               </>
             ) : (
               <>
@@ -90,10 +89,19 @@ const App = () => {
         </nav>
         <div>
           <Switch>
+            
+            <Route exact path="/">
+              <Redirect to="/home" />
+            </Route>
+
+            <Route
+              path="/home"
+              component={Home} 
+            />
 
             <Route path="/add/payment+details"
               render={(props) => <AddPayment {...props} userId={userId} />}
-              />
+            />
 
             <Route
               path={`/view/payment+details/${userId}`}
@@ -165,19 +173,45 @@ const App = () => {
               component = {updateTourguide} 
             />
 
-            <Route exact path={["/admin/hotel"]} component={Navbar} />
+            <Route 
+              path={["/admin/hotel"]}
+              component={Navbar}
+            />
 
-            <Route exact path={["/add/hotel"]} component={AddHotel} />
+            <Route 
+              path={["/add/hotel"]}
+              component={AddHotel}
+            />
 
-            <Route exact path={["/all/hotel"]} component={AllHotel} />
+            <Route 
+              path={["/all/hotel"]}
+              component={AllHotel}
+            />
 
-            <Route exact path="/update/hotel/:id" component={EditHotel} />
+            <Route 
+              path="/update/hotel/:id"
+              component={EditHotel}
+            />
 
-            <Route exact path={["/print/hotel"]} component={report} />
+            <Route 
+              path={["/print/hotel"]}
+              component={report}
+            />
 
-            <Route exact path={["/view/hotel"]} component={ViewHotel} />
+            <Route 
+              path={["/view/hotel"]}
+              component={ViewHotel}
+            />
             
-            <Route exact path={["/insert/hotel"]} component={BookingHotel} />
+            <Route 
+              path={["/insert/hotel"]}
+              component={BookingHotel}
+            />
+
+            <Route 
+              path={["/landing/page"]}
+              component={Navbar}
+            />
 
           </Switch>
         </div>
