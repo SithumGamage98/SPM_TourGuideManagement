@@ -150,6 +150,31 @@
 }
 
 
+.btnSubmit2{
+
+
+  background-color: #4619d8;
+  border-radius: 50px;
+  border-width: 5;
+  box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  text-align: center;
+  height: 30px;
+  padding: 0 25px;
+  transition: all 200ms;
+
+
+
+}
+
+
+
+
+
 
 .btnHome{
 
@@ -240,7 +265,8 @@ transition: all 200ms;
 
 .btnUpdate2{
 
-  background-color: #c20000;
+  background-color: #00ac33
+  ;
   border-radius: 10px;
   border-width: 0;
   box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
@@ -255,6 +281,31 @@ transition: all 200ms;
   transition: all 200ms;
 
 }
+
+
+
+.BtnUpdateSp{
+
+
+  background-color: #008414;
+  border-radius: 50px;
+  border-width: 5;
+ 
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  text-align: center;
+  height: 30px;
+  width:200px;
+  padding: 0 25px;
+  transition: all 200ms; width:100;
+ 
+
+
+}
+
 
 .logo{
 
@@ -285,6 +336,21 @@ transition: all 200ms;
 
 
 }
+
+
+.b1{
+
+  position:absolute;
+  right:700;
+  top:200;
+
+
+}
+
+
+
+
+
 
 
 .ManagerBody{
@@ -331,3 +397,125 @@ right:100px;
 
 
 } 
+
+
+.totPrice2{
+
+color:#e6150a;
+font-weight: bold;
+
+}
+
+.desti{
+
+
+  color:#11c101;
+  font-weight: bold;
+
+
+}
+
+.num{
+
+  font-weight: bold;
+
+}
+
+
+
+.tableH{
+
+  color:#4468E2;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight:lighter;
+
+
+}
+
+/*Css for view all customer created packages */
+
+.si{
+
+
+  font-weight: bold;
+  font-size:larger;
+  color:#4468E2;
+
+}
+
+.siname{
+
+  font-size:xx-large;
+  font-weight:initial;
+  color:#4619d8;
+
+
+}
+
+
+.BtnUpdateSp{
+
+  background-color: #270bda;
+  border-radius: 10px;
+  border-width: 5;
+  box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+  height: 40px;
+  width:250px;
+  padding: 0 25px;
+  transition: all 200ms;
+
+}
+
+.BtnDeleSp{
+
+  background-color: #d81919;
+  border-radius: 10px;
+  border-width: 5;
+  box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+  height: 40px;
+  width:250px;
+  padding: 0 25px;
+  transition: all 200ms;
+
+
+}
+
+.SeeAllCuzPacks{
+
+
+  box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
+  border-style:ridge;
+  border-bottom-right-radius: 4em;
+  background-clip: inherit;
+  background-color: #f1f1f1;
+  backface-visibility: visible;
+  right:500px;
+  border-color: #270bda;
+  color:#4468E2;
+  
+
+
+
+
+
+}
+
+.userInputes{
+
+ color:#4468E2;
+ font-size: larger;
+
+
+}
