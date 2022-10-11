@@ -89,21 +89,6 @@ export default class ViewHotel extends Component {
       return (
 
          <div className={styles.body}>
-
- 
- {/* <!--header---> */}
-	<div className={styles.header2}>
-   <img src={logo}  className={styles.logo}></img>
-		<div class="bx bx-menu" id="menu-icon"></div>
-
-		<ul className={styles.navbar2} >
-			<li><a href="#home">Home</a></li>
-			<li><a href="#package">Package</a></li>
-			<li><a href="#tour guide">Tour Guide</a></li>
-			<li><a href="#contact">Contact Us</a></li>
-		</ul>
-	</div>
-
     {/* <!--Home section---> */}
 	<section  className={styles.home2} >
    

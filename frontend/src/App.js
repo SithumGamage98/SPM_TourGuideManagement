@@ -64,7 +64,7 @@ const App = () => {
                 </li>
 
                 <li>
-                  <Link to={`/landing/page`}>Hotels</Link>
+                  <Link to={`/view/hotel`}>Hotels</Link>
                   {/* <Link to={`/checkout/${userId}`}>Hotels</Link> */}
                 </li>
 
@@ -145,7 +145,7 @@ const App = () => {
             />
 
             <Route
-              path={`/checkout/${userId}`}
+              path={`/checkout`}
               render={(props) => <Checkout {...props} userId={userId} />}
             />
 

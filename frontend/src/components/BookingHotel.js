@@ -48,19 +48,6 @@ return (
     <div class= "body">
        
 
- {/* <!--header---> */}
- <div className={styles.header2}>
- <img src={logo}  className={styles.logo}></img>
-		<div class="bx bx-menu" id="menu-icon"></div>
-
-		<ul className={styles.navbar2} >
-			<li><a href="#home">Home</a></li>
-			<li><a href="#package">Hotel</a></li>
-			<li><a href="#tour guide">Tour Guide</a></li>
-			<li><a href="#contact">Package</a></li>
-		</ul>
-	</div>
-
 <section  className={styles.home2} >
    
    
@@ -115,7 +102,7 @@ return (
                      </div>
 
                      <div  className={`col-lg-1 ${styles.btn1}`}>
-                     <button type="button"  className="btn btn-primary" style={{weight: "50px", background: "#87C1FF"}}>Submit</button>
+                     <Link class="btn btn-primary" style={{weight: "50px", background: "#87C1FF"}} type="submit" to={`/checkout`} >Submit</Link>
                      </div>
 
                  </div>
