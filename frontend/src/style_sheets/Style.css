@@ -43,6 +43,7 @@
    border-radius: 15px;
    width: 1500px;
    height:80px;
+   color:#cdd6f3;
   
 
 
@@ -124,7 +125,7 @@
 .btnSubmit{
 
 
-  background-color: #4619d8;
+  background-color: #4468E2;
   border-radius: 30px;
   border-width: 7;
   box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
@@ -179,7 +180,7 @@
 .btnHome{
 
 
-background-color: #c9ccd6;
+background-color: #f3f3f6;
 border-radius: 50px;
 border-width: 0;
 box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
@@ -192,6 +193,28 @@ height: 30px;
 padding: 0 25px;
 text-align: center;
 transition: all 200ms;
+
+
+}
+
+
+.btnHomeFront{
+
+  background-color: #7552ea;
+  border-radius: 50px;
+  border-width: 5;
+  box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  text-align: center;
+  height: 30px;
+  padding: 0 25px;
+  transition: all 200ms;
+
+
 
 
 }
@@ -466,7 +489,7 @@ font-weight: bold;
   font-size: 1.5em;
   text-align: center;
   height: 40px;
-  width:250px;
+  width:150px;
   padding: 0 25px;
   transition: all 200ms;
 
@@ -485,7 +508,7 @@ font-weight: bold;
   font-size: 1.5em;
   text-align: center;
   height: 40px;
-  width:250px;
+  width:150px;
   padding: 0 25px;
   transition: all 200ms;
 
@@ -516,6 +539,75 @@ font-weight: bold;
 
  color:#4468E2;
  font-size: larger;
+
+
+}
+
+/*Customer created packages ------ UPDATE---- CSS*/
+
+.CuzUpText{
+
+
+position: absolute;
+right:950px;
+top:15px;
+
+
+
+}
+
+/*Manage customer created packages */
+
+
+/* Header for manager cus package page */
+.header3{
+
+  background-color: #4468E2;
+  border-radius: 15px;
+  width: 1500px;
+  height:80px;
+  color:#cdd6f3;
+  position: absolute;
+  right:0px;
+  scroll-padding-left: 200;
+
+}
+
+/* For home button */
+
+.btnHome2{
+
+
+  background-color: #c9ccd6;
+  border-radius: 50px;
+  border-width: 0;
+  box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
+  color: #4619d8;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  height: 30px;
+  padding: 0 25px;
+  text-align: center;
+  transition: all 200ms;
+  position:absolute;
+  right:290px;
+  
+  
+  }
+
+/* Message part */
+
+.card-body6{
+
+
+position: absolute;
+top:1100px;
+background-color: #4468E2;
+opacity: 70%;
+width:1600px;
+
 
 
 }

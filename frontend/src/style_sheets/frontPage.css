@@ -1,0 +1,97 @@
+.header22{
+ 
+
+ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+ color:#4468E2;
+ 
+ 
+}
+
+.pic1{
+
+ border-radius: 6ch;
+ border-color: blue;
+ position:absolute;
+ right:1100px;
+ width: 400px;
+ height:300px
+}
+
+
+
+.pic2{
+
+    border-radius: 6ch;
+    border-color: blue;
+    position:absolute;
+    top:110px;
+    right:380px;
+    width: 400px;
+    height:300px
+
+}
+
+.pic3{
+
+    border-radius: 6ch;
+    border-color: blue;
+    position:absolute;
+    top:430px;
+    right:380px;
+    width: 400px;
+    height:300px
+
+
+
+}
+
+.pic4{
+
+    border-radius: 6ch;
+    border-color: blue;
+    position:absolute;
+    top:320px;
+    right:1100px;
+    width: 400px;
+    height:300px
+
+}
+
+.pic5{
+
+    border-radius: 6ch;
+    border-color: blue;
+    position:absolute;
+    top:640px;
+    right:1100px;
+    width: 400px;
+    height:300px
+
+
+
+
+}
+
+.pic6{
+
+
+    border-radius: 6ch;
+    border-color: blue;
+    position:absolute;
+    top:640px;
+    right:380px;
+    width: 400px;
+    height:300px
+
+
+}
+
+.name{
+
+ font-weight: 300;
+ font-family: fantasy;
+
+
+
+}
+

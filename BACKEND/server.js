@@ -9,6 +9,7 @@ require("dotenv").config();
 const PORT = process.env.PORT || 8070;
 
 const PackageRouter = require("./routes/packages.js")
+const cusPackRouter = require("./routes/cusPacks.js");
 const paymentRouter = require('./routes/payment-route');
 const paymentHistoryRouter = require('./routes/payment-history-route')
 const hotelRouter = require ("./routes/hotels.js");
@@ -21,6 +22,7 @@ app.use(bodyParser.json());
 
 //routes to make api calls
 app.use("/package", PackageRouter);
+app.use("/cusPack",cusPackRouter);
 app.use("/payment", paymentRouter);
 app.use("/payments/history", paymentHistoryRouter);
 app.use("/hotel", hotelRouter);
