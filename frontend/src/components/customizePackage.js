@@ -57,8 +57,8 @@ function CusPackage(){
     <div class="row">
     <form onSubmit={sendData} >
    
-    <a class="btnHomeFront" href="/front"  style={{ position:"absolute", right:30,top:86}}>Home</a> &nbsp;&nbsp;
-     <a class="btnHomeFront" href="findP"  style={{ position:"absolute", right:140,top:86}}>My packages</a>
+   
+     <a class="btnHomeFront" href="/find/cusPack"  style={{ position:"absolute", right:80,top:86}}>My packages</a>
      <img  src={pic2} height={400} width={600} style={{position:"absolute",top:300,right:20}} alt="Card image cap" />
     <div class="form-group col-md-6">
       <label for="uname"><strong>User name</strong></label>
@@ -173,7 +173,7 @@ function CusPackage(){
     </div><br></br>
    
     <button class="btnSubmit" type="submit" style={{width:"250px"}}><strong><i className="fa-solid fa-folder-plus"></i>&nbsp;&nbsp;Create</strong></button>&nbsp;&nbsp;
-    <a href="/search" class="btnBack"><strong>Back</strong></a>&nbsp;&nbsp;
+    <a href="/search/destination" class="btnBack"><strong>Back</strong></a>&nbsp;&nbsp;
     
    </form>
    </div>

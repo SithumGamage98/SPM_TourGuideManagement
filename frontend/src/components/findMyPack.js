@@ -1,7 +1,7 @@
 import React,{Component} from "react";
 import axios from "axios";
 import {Link} from 'react-router-dom';
-import tour from '../images/findPhoto.jpg'
+import tour from '../img/findPhoto.jpg'
 import '../App.css';
 
 //import Package from "../../../TourPackage/BACKEND/models/Package";
@@ -104,9 +104,9 @@ handleTextSearch=(e)=>{
     return(
     <div>
       <div className="container" class="p-3 mb-2 bg-white">
-      <img class="logo" src={tour} style={{ position:"absolute", right:100,top:380}} height={500} width={600}  alt="Card image cap"></img>
+      <img class="logo" src={tour} style={{ position:"absolute", right:100,top:300}} height={500} width={600}  alt="Card image cap"></img>
       <h4 style={{ position:"absolute", right:1100,top:50}} class="PackDetails">Enter your user name</h4> <br></br><br></br><br></br>
-      <a class="btnHomeFront" href="/front"  style={{ position:"absolute", right:100,top:35}}>Home</a>
+     
       <div   style={{ position:"absolute",right:"500px", width:600}} >
           
         
@@ -151,8 +151,8 @@ handleTextSearch=(e)=>{
      
   </div>
 
-  <p style={{ position:"absolute", right:100,top:850}}>If you want to change or delete your tour package,please contact package manager!</p>
-  <Link to="/all2" style={{ position:"absolute", right:300,top:900}}><button class="btnBack" type="button">Contact manager</button></Link>&nbsp;&nbsp;
+  <p style={{ position:"absolute", right:100,top:760}}>If you want to change or delete your tour package,please contact package manager!</p>
+  <Link to="/all2" style={{ position:"absolute", right:300,top:800}}><button class="btnBack" type="button">Contact manager</button></Link>&nbsp;&nbsp;
 
   <div class="card-body">
   <h5 class="text-dark"><center><strong>Travelo</strong></center></h5>

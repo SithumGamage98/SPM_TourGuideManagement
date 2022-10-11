@@ -12,9 +12,6 @@ import create from '../img/Create package.jpg'
 
 
 
-
-
-
 function AddPackage(){
 
   const [name,setName] = useState("");
@@ -26,11 +23,13 @@ function AddPackage(){
   const [transport,setTrans] = useState("");
   const [tourGuide,setGuide] = useState("");
   const [totPrice,setPrice] = useState("");
+  const [photo,setPhoto] = useState("");
 
 
   // (local function) sendData(e: any):void
   function sendData(e){
    e.preventDefault();
+   
    
    const newPackage={
 
@@ -42,10 +41,15 @@ function AddPackage(){
      hotel,
      transport,
      tourGuide,
-     totPrice
+     totPrice,
+     
 
 
    }
+
+   
+
+
    axios.post("http://localhost:8070/package/add",newPackage).then(()=>{
 
      alert("Package Added")
@@ -65,8 +69,8 @@ function AddPackage(){
     <form onSubmit={sendData}>
 
     <img class="logo" src={galle} style={{ position:"absolute", right:1300,top:26}} height={50} width={200}  alt="Card image cap"></img>
-    <a class="btnHome" href="/man"  style={{ position:"absolute", right:150,top:26}}>Home</a>
-    <div class="header"> <h1 class="header"><strong><center>Enter New Tour Package Details</center></strong></h1><br></br></div>
+    <a class="btnHome" href="/man"  style={{ position:"absolute", right:50,top:600}}>Home</a>
+    <div class="header2"> <h1 class="header"><strong><center>Enter New Tour Package Details</center></strong></h1><br></br></div>
    
   <br></br><br></br>
  
@@ -133,7 +137,7 @@ function AddPackage(){
 
     
     </div><br></br>
-   <div style={{position:"absolute",top:125,right:300}}>
+   <div style={{position:"absolute",top:220,right:300}}>
     <div className="form-group" style={{width:"500px"}}>
       <label for="hotel"><strong>Hotel/Other</strong></label>
       <select type="text" class="form-control" id="hotel" required placeholder="Enter hotel name"
