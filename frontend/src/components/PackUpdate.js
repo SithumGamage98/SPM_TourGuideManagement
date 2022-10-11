@@ -89,9 +89,11 @@ return(
 
   
           <div className="container">
-          <img class="logo"  src={galle} style={{ position:"absolute", right:1200,top:13}} height={50} width={200}  alt="Card image cap"></img>
-          <div class="header"> <h1 class="header"><strong><center>Update Package Details</center></strong></h1><br></br></div>
-          <br></br>
+           <br></br>
+   <div style={{ position:"absolute", right:20,top:10}}> <div class="header3"><img class="logo" src={galle} style={{ position:"absolute", right:1280,top:15}} height={50} width={200}  alt="Card image cap"></img>
+     <a class="btnHome2" href="/man"  style={{ position:"absolute", right:120,top:20}}>Home</a>
+     <div> <h1><strong><center>Update package details</center></strong></h1><br></br></div></div> </div>
+    <br></br><br></br><br></br><br></br>
        
       <form class="hh" className="form-group" style={{right:1200}}>
          <div className="form-row" style={{width:"900px"}}>
@@ -186,7 +188,7 @@ return(
   
        <br></br><br></br>
       
-     <div class="card-body">
+     <div class="card-body" style={{ position:"absolute", right:14,top:600} }>
   <h5 class="text-dark"><center><strong>Travelo</strong></center></h5>
   <p class="text-white"><center>copyright @2020 Travelo All rights are reserved</center></p>
   </div>

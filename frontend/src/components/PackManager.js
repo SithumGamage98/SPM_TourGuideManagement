@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import mana from '../images/boss.jpg'
+import mana from '../img/boss.jpg'
 import { Link, useNavigate, useParams } from "react-router-dom";
-import "./../Style.css";
-import galle from '../images/Travelo.jpeg'
+import "../style_sheets/Style.css";
+import galle from '../img/Travelo.jpeg'
 
 
 
@@ -14,7 +14,7 @@ export default class manager extends Component {
     return (
 
       <div>
-       <div class="header" style={{width:"1600px"}}> <h1 class="header"  style={{position:"inherit", top:"40px"}}><strong><center>Package Manager's Home Page</center></strong></h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <div class="header2" style={{width:"1600px"}}> <h1 class="header"  style={{position:"inherit", top:"40px"}}><strong><center>Package Manager's Home Page</center></strong></h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
           <img class="logo"  src={galle} style={{ position:"absolute", right:1300,top:13}} height={50} width={200}  alt="Card image cap"></img>
@@ -23,15 +23,15 @@ export default class manager extends Component {
           
        
         </div>
-        <img src={mana} height={500} width={300} style={{
+        <img src={mana} height={400} width={80} style={{
           position: 'absolute',
           right: 500,
-          top: 85,
+          top: 235,
         }} alt="Card image cap" />
 
       <diV class="ManagerBody">
         <div class="mangerInfo">
-        <div class="card text-dark bg-light mb-3" style={{ width: "300px", position: 'absolute', right: 200, top: 250, }}>
+        <div class="card text-dark bg-light mb-3" style={{ width: "300px", position: 'absolute', right: 200, top: 250,}}>
           <div class="card-header"> <b>Hello..Mr.Gamage</b></div>
           <div class="card-body1">
             <p class="card-text"><i>Your user name -</i> Man_Package23</p>
@@ -52,14 +52,14 @@ export default class manager extends Component {
         <div class="ManagerCard"  style={{ width: '24rem' }}>
           <div class="card-body1">
             <h5 class="card-title" class="text-white"><strong>Manage package details</strong></h5>
-            <Link to="/all"><button class="ManLetsgoo" type="button"><i className="fa-solid fa-angles-right"></i>Lets go..</button></Link>&nbsp;&nbsp;
+            <Link to="/manage/AllPacks"><button class="ManLetsgoo" type="button"><i className="fa-solid fa-angles-right"></i>Lets go..</button></Link>&nbsp;&nbsp;
           </div>
         </div><br></br>
 
         <div class="ManagerCard"  style={{ width: '24rem' }}>
           <div class="card-body1">
             <h5 class="card-title" class="text-white"><strong>Customer created packages</strong></h5>
-            <Link to="/report"><button class="ManLetsgoo" type="button"><i className="fa-solid fa-angles-right"></i>Lets go..</button></Link>&nbsp;&nbsp;
+            <Link to="/all2"><button class="ManLetsgoo" type="button"><i className="fa-solid fa-angles-right"></i>Lets go..</button></Link>&nbsp;&nbsp;
           </div>
         </div>
 

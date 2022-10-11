@@ -24,7 +24,7 @@ export default class sith extends Component{
 
   <img class="pic1" src={Train} height={400} width={700} />
   
-    <div style={{position:'absolute',right:670,top:120,hight:200,width:400}}>
+    <div style={{position:'absolute',right:670,top:190,hight:200,width:400}}>
     <h4><a class="name"><strong>Package Ella</strong></a></h4>
       Destination - Ella, Badulla <br></br>
       Number of days - 3 Days<br></br>
@@ -41,7 +41,7 @@ export default class sith extends Component{
 
 <div>
   <img class="pic2" src={Beach} height={400} width={700} ></img>
-    <div  style={{position:'absolute',right:-80,top:120,hight:200,width:400}}> 
+    <div  style={{position:'absolute',right:-60,top:190,hight:200,width:400}}> 
     <h4 ><a class="name"><strong>Ussangoda Night Camping</strong></a></h4>
      Destination - Ambalanthota,Ussangoda beach,Ranna,Tengalle<br></br>
       Number of days - 2 Days<br></br>
@@ -60,7 +60,7 @@ export default class sith extends Component{
 <img class="pic3" src={segiri} height={400} width={700} ></img>
   <div >
   </div>
-  <div  style={{position:'absolute',right:-80,top:440,hight:200,width:400}}>
+  <div  style={{position:'absolute',right:-60,top:510,hight:200,width:400}}>
   <h4 ><a class="name"><strong>Seegiri Travel PP2</strong></a></h4>
       Destination - Dambulla,Seegiriya <br></br>
       Number of days - 4 Days<br></br>
@@ -89,7 +89,7 @@ export default class sith extends Component{
       Number of days - 4 Days<br></br>
       Number of passengers - 5<br></br>
       <p class="text-danger">Total Price - <strong> Rs.23700/=</strong></p>
-    <a href="/search/destinationsearch" class="btn btn-warning">GET MORE</a><br></br> 
+    <a href="/search/destination" class="btn btn-warning">GET MORE</a><br></br> 
     <br></br>
     <a href="#" class="btn btn-success">GET PAYMENT</a>
     </div>
@@ -124,7 +124,7 @@ export default class sith extends Component{
   <div >
   
   </div>
-    <div style={{position:'absolute',right:-80,top:660,hight:200,width:400}}>
+    <div style={{position:'absolute',right:-60,top:660,hight:200,width:400}}>
      <h4 ><a class="name"><strong>Yala saffary FAM-7</strong></a></h4>
       Destination - Tissamaharama,Yala<br></br>
       Number of days - 3 Days<br></br>
@@ -141,8 +141,7 @@ export default class sith extends Component{
 </div>
 
 
-
-<div class="card-body6">
+<div class="card-body6" style={{ position:"absolute", right:5,top:1200}}>
   <h5 class="text-dark"><center><strong>Travelo</strong></center></h5>
   <p class="text-white"><center>copyright @2020 Travelo All rights are reserved</center></p>
   </div>

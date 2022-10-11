@@ -108,18 +108,19 @@ handleTextSearch=(e)=>{
     return(
 
       <div className="container">
-      <img class="logo"  src={galle} style={{ position:"absolute", right:1200,top:35}} height={50} width={200}  alt="Card image cap"></img>
       <br></br>
-      
-      <a class="btnHome" href="/man"  style={{ position:"absolute", right:100,top:40}}>Home</a>
-      <div class="header"> <h1><strong><center>Manage Package Details</center></strong></h1><br></br></div>
-     <br></br><br></br><br></br>
-     <h4 style={{ position:"absolute", right:1100,top:180}} class="PackDetails">Enter Pack_ID here</h4>
+    <div class="header3"><img class="logo" src={galle} style={{ position:"absolute", right:1280,top:15}} height={50} width={200}  alt="Card image cap"></img>
+     <a class="btnHome2" href="/man"  style={{ position:"absolute", right:120,top:20}}>Home</a>
+     <div> <h1><strong><center>Manage package details</center></strong></h1><br></br></div></div> 
+    <br></br><br></br><br></br>
+    
+    
+     <h4 style={{ position:"absolute", right:1100,top:120}} class="PackDetails">Enter Pack_ID here</h4>
      
      <center>
       <div className="col-lg-3 mt-2 mb-2" class="text-center"   style={{ right:"100px" , width:600}} >
           
-        
+        <br></br><br></br>
           <input
            className="form-control"
            type="search"
@@ -166,7 +167,10 @@ handleTextSearch=(e)=>{
           <td>{packages.tourGuide}</td>
           <td>{packages.totPrice}</td>
 
+
+
           <td>
+
           <div><a class="btnUpdate" href = {`/update/${packages._id}`}  style={{width:"200px"}}>Update</a> </div> 
                    
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -187,7 +191,7 @@ handleTextSearch=(e)=>{
     
  
  
-  <div class="card-body">
+  <div class="card-body" style={{ position:"absolute", right:20,top:900}}>
   <h5 class="text-dark"><center><strong>Travelo</strong></center></h5>
   <p class="text-white"><center>copyright @2020 Travelo All rights are reserved</center></p>
   </div>

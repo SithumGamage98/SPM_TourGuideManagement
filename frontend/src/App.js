@@ -22,7 +22,6 @@ import Checkout from "./components/Checkout";
 import AddTourguide from './components/AddTourguide';
 import AllTourguides from './components/AllTourguides';
 import updateTourguide from './components/UpdateTourguide';
-
 import AddHotel from "./components/AddHotel";
 import BookingHotel from "./components/BookingHotel";
 import Navbar from "./components/Navbar";
@@ -30,13 +29,15 @@ import AllHotel from "./components/AllHotel";
 import EditHotel from "./components/EditHotel";
 import ViewHotel from "./components/ViewHotel";
 import report from "./components/report";
-import EditPack from './components/PackUpdate'
 import AddPackage from './components/addPackage';
-
-//import manager from "./components/PackManager";
+import manager from "./components/PackManager";
 import sith from './components/edit';
 import cusPack from './components/CustomerPack';
 import CusPackage from './components/customizePackage';
+import findMyPack from './components/findMyPack';
+import AllPacks from './components/AllPacks';
+import EditPack from './components/PackUpdate'
+
 
 
 const App = () => {
@@ -236,7 +237,24 @@ const App = () => {
               component = {CusPackage} 
             />
 
+            <Route 
+              path= {["/find/cusPack"]}
+              component = {findMyPack} 
+            />
 
+            <Route 
+              path= {["/page/manager"]}
+              component = {manager} 
+            />
+
+            <Route 
+              path= {["/manage/AllPacks"]}
+              component = {AllPacks} 
+            />
+
+            
+
+ 
           </Switch>
         </div>
       </div>

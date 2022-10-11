@@ -151,7 +151,7 @@ export default class cusPack extends Component{
      </table>
 
       
-     <a href="/view/cuspackage" class="btnBack"><strong>Back</strong></a>&nbsp;&nbsp;
+     <a href="/search/destination" class="btnBack"><strong>Back</strong></a>&nbsp;&nbsp;
      
       
       </div>
