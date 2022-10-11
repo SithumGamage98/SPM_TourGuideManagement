@@ -22,9 +22,7 @@ import Checkout from "./components/Checkout";
 import AddTourguide from './components/AddTourguide';
 import AllTourguides from './components/AllTourguides';
 import updateTourguide from './components/UpdateTourguide';
-import AddPackage from './components/addPackage';
-import AllPacks from './components/AllPacks';
-//import manager from "./components/PackManager";
+
 import AddHotel from "./components/AddHotel";
 import BookingHotel from "./components/BookingHotel";
 import Navbar from "./components/Navbar";
@@ -33,6 +31,12 @@ import EditHotel from "./components/EditHotel";
 import ViewHotel from "./components/ViewHotel";
 import report from "./components/report";
 import EditPack from './components/PackUpdate'
+import AddPackage from './components/addPackage';
+
+//import manager from "./components/PackManager";
+import sith from './components/edit';
+import cusPack from './components/CustomerPack';
+import CusPackage from './components/customizePackage';
 
 
 const App = () => {
@@ -69,7 +73,7 @@ const App = () => {
                 </li>
 
                 <li>
-                  <a href="#contact">Tour Packages</a>
+                  <a href="/view/cuspackage">Tour Packages</a>
                 </li>
 
                 <li>
@@ -160,14 +164,6 @@ const App = () => {
               component = {updateTourguide} 
             />
 
-            <Route 
-              path= {["/add/package"]}
-              component = {AddPackage} 
-            />
-
-           
-
-
 
             <Route 
               path= {["/update/tourguide/:id"]}
@@ -218,6 +214,28 @@ const App = () => {
               path={["/landing/page"]}
               component={Navbar}
             />
+
+
+            <Route 
+              path= {["/add/package"]}
+              component = {AddPackage} 
+            />
+
+            <Route 
+              path= {["/view/cuspackage"]}
+              component = {sith} 
+            />
+
+            <Route 
+              path= {["/search/destination"]}
+              component = {cusPack} 
+            />
+
+            <Route 
+              path= {["/edit/cusPack"]}
+              component = {CusPackage} 
+            />
+
 
           </Switch>
         </div>

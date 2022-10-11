@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 import axios from "axios";
-import Train from '../images/my23.jpg'
+import Train from '../img/my23.jpg'
 import '../App.css';
 //import Package from ".../src/Package";
 //import Package from "../../../TourPackage/BACKEND/models/Package";
@@ -83,7 +83,7 @@ export default class cusPack extends Component{
       <div className="container">  
       
       <div class="text-center"><img class="img-fluid" src={Train} height={100} width={600}  alt="Card image cap" /></div>
-      <a className="customize" href="/cuz"  class="btnSubmit2" style={{position:"absolute",right:150,top:410,}}><strong><i className="fa-solid fa-plane-departure"></i>&nbsp;&nbsp;Customize Your Tour</strong></a>&nbsp;&nbsp;
+      <a className="customize" href="/edit/cusPack"  class="btnSubmit2" style={{position:"absolute",right:150,top:410,}}><strong><i className="fa-solid fa-plane-departure"></i>&nbsp;&nbsp;Customize Your Tour</strong></a>&nbsp;&nbsp;
       <div className="row">
       <div className="col-lg-9 mt-2 mb-2">
       <h3 className="Ball" class="tableH"><strong>Search your Destination </strong></h3>
@@ -151,7 +151,7 @@ export default class cusPack extends Component{
      </table>
 
       
-     <a href="/front" class="btnBack"><strong>Back</strong></a>&nbsp;&nbsp;
+     <a href="/view/cuspackage" class="btnBack"><strong>Back</strong></a>&nbsp;&nbsp;
      
       
       </div>

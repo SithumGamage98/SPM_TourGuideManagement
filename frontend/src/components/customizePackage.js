@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 //import React,{Component} from "react"
 import axios from "axios";
-import pic2 from '../images/Tboy.jpg'
+import pic2 from '../img/Tboy.jpg'
 
 
 
@@ -51,16 +51,15 @@ function CusPackage(){
  return(
    
   
-   <div className="container" class="p-3 mb-2 bg-white">
+   <div className="container" class="p-4 mb-1 bg-white">
    
     
     <div class="row">
-    <form onSubmit={sendData} c>
-    <div class="header2"></div>
-    <div class="header"> <h1 class="header" style={{position:"absolute",top:40 ,right:450}}><strong><center>Create my tour packages</center></strong></h1><br></br></div><br></br>
-     <a class="btnHome" href="#"  style={{ position:"absolute", right:30,top:26}}>Home</a> &nbsp;&nbsp;
-     <a class="btnHome" href="#"  style={{ position:"absolute", right:140,top:26}}>My packages</a>
-     <img  src={pic2} height={600} width={600} style={{position:"absolute",top:200,right:20}} alt="Card image cap" />
+    <form onSubmit={sendData} >
+   
+    <a class="btnHomeFront" href="/front"  style={{ position:"absolute", right:30,top:86}}>Home</a> &nbsp;&nbsp;
+     <a class="btnHomeFront" href="findP"  style={{ position:"absolute", right:140,top:86}}>My packages</a>
+     <img  src={pic2} height={400} width={600} style={{position:"absolute",top:300,right:20}} alt="Card image cap" />
     <div class="form-group col-md-6">
       <label for="uname"><strong>User name</strong></label>
       <input type="text" class="form-control" id="uname" placeholder="Enter your name here"
@@ -174,36 +173,18 @@ function CusPackage(){
     </div><br></br>
    
     <button class="btnSubmit" type="submit" style={{width:"250px"}}><strong><i className="fa-solid fa-folder-plus"></i>&nbsp;&nbsp;Create</strong></button>&nbsp;&nbsp;
-    
+    <a href="/search" class="btnBack"><strong>Back</strong></a>&nbsp;&nbsp;
     
    </form>
    </div>
 
 
 <br></br>
-  <div class="card-body">
-  <h5 class="text-dark"><center><strong>Travelo</strong></center></h5>
-  <p class="text-white"><center>copyright @2020 Travelo All rights are reserved</center></p>
-  </div>
-  <div class="card-footer text-muted">
-    
-  </div>
-
-
-
-
-
-
-
-   </div>
-
   
+   </div>
 
 
  )
-
-
-
 
 } 
 

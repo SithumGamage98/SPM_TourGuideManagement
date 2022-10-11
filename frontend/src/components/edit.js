@@ -1,14 +1,13 @@
 
 import React,{Component} from "react";
-import Train from '../images/ella.jpg'
-import Beach from '../images/2.jpg'
-import segiri from '../images/3.jpg'
-import Apura from '../images/5.jpg'
-import galle from '../images/7.jpg'
-import pp from '../images/polonnaruwa.jpeg'
-import yala from '../images/yala.jpg'
-import '../frontPage.css';
-
+import Train from '../img/ella.jpg'
+import Beach from '../img/2.jpg'
+import segiri from '../img/3.jpg'
+import Apura from '../img/5.jpg'
+import galle from '../img/7.jpg'
+import pp from '../img/polonnaruwa.jpeg'
+import yala from '../img/yala.jpg'
+import "../style_sheets/frontPage.css";
 
 
 export default class sith extends Component{
@@ -31,7 +30,7 @@ export default class sith extends Component{
       Number of days - 3 Days<br></br>
       Number of passengers - 4<br></br>
       <p class="text-danger">Total Price - <strong> Rs.12500/=</strong></p>
-         <a href="/search" class="btn btn-warning">GET MORE</a><br></br> 
+         <a href="/search/destination" class="btn btn-warning">GET MORE</a><br></br> 
     <br></br>
     <a href="#" class="btn btn-success">GET PAYMENT</a>
       
@@ -48,7 +47,7 @@ export default class sith extends Component{
       Number of days - 2 Days<br></br>
       Number of passengers - 8<br></br>
       <p class="text-danger">Total Price - <strong> Rs.16500/=</strong></p>
-    <a href="/search" class="btn btn-warning">GET MORE</a><br></br> 
+    <a href="/search/destination" class="btn btn-warning">GET MORE</a><br></br> 
     <br></br>
     <a href="#" class="btn btn-success">GET PAYMENT</a>
     
@@ -67,7 +66,7 @@ export default class sith extends Component{
       Number of days - 4 Days<br></br>
       Number of passengers - 5<br></br>
       <p class="text-danger">Total Price - <strong> Rs.12500/=</strong></p>
-         <a href="/search" class="btn btn-warning">GET MORE</a><br></br> 
+         <a href="/search/destination" class="btn btn-warning">GET MORE</a><br></br> 
     <br></br>
     <a href="#" class="btn btn-success">GET PAYMENT</a>
       
@@ -90,7 +89,7 @@ export default class sith extends Component{
       Number of days - 4 Days<br></br>
       Number of passengers - 5<br></br>
       <p class="text-danger">Total Price - <strong> Rs.23700/=</strong></p>
-    <a href="/search" class="btn btn-warning">GET MORE</a><br></br> 
+    <a href="/search/destinationsearch" class="btn btn-warning">GET MORE</a><br></br> 
     <br></br>
     <a href="#" class="btn btn-success">GET PAYMENT</a>
     </div>
@@ -109,7 +108,7 @@ export default class sith extends Component{
       Number of days - 4 Days<br></br>
       Number of passengers - 5<br></br>
       <p class="text-danger">Total Price - <strong> Rs.46700/=</strong></p>
-    <a href="/search" class="btn btn-warning">GET MORE</a><br></br> 
+    <a href="/search/destination" class="btn btn-warning">GET MORE</a><br></br> 
     <br></br>
     <a href="#" class="btn btn-success">GET PAYMENT</a>
     </div>
@@ -131,7 +130,7 @@ export default class sith extends Component{
       Number of days - 3 Days<br></br>
       Number of passengers - 15<br></br>
       <p class="text-danger">Total Price - <strong> Rs.46700/=</strong></p>
-    <a href="/search" class="btn btn-warning">GET MORE</a><br></br> 
+    <a href="/search/destination" class="btn btn-warning">GET MORE</a><br></br> 
     <br></br>
     <a href="#" class="btn btn-success">GET PAYMENT</a>
     </div>
