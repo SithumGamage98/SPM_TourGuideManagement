@@ -2,7 +2,7 @@ import React,{Component} from "react";
 import axios from "axios";
 import {Link} from 'react-router-dom';
 import galle from '../img/Travelo.jpeg'
-import "../style_sheets/Style.css";
+import myStyle from "../style_sheets/Style.module.css";
 //import Package from "../../../TourPackage/BACKEND/models/Package";
 
 
@@ -109,16 +109,16 @@ handleTextSearch=(e)=>{
 
       <div className="container">
       <br></br>
-    <div class="header3"><img class="logo" src={galle} style={{ position:"absolute", right:1280,top:15}} height={50} width={200}  alt="Card image cap"></img>
-     <a class="btnHome2" href="/man"  style={{ position:"absolute", right:120,top:20}}>Home</a>
+    <div class={myStyle.header3}><img class="logo" src={galle} style={{ position:"absolute", right:1280,top:15}} height={50} width={200}  alt="Card image cap"></img>
+     <a class={myStyle.btnHome2} href="/man"  style={{ position:"absolute", right:120,top:20}}>Home</a>
      <div> <h1><strong><center>Manage package details</center></strong></h1><br></br></div></div> 
     <br></br><br></br><br></br>
     
     
-     <h4 style={{ position:"absolute", right:1100,top:120}} class="PackDetails">Enter Pack_ID here</h4>
+     <h4 style={{ position:"absolute", right:1100,top:120}} class={myStyle.PackDetails}>Enter Pack_ID here</h4>
      
      <center>
-      <div className="col-lg-3 mt-2 mb-2" class="text-center"   style={{ right:"100px" , width:600}} >
+      <div className="col-lg-3 mt-2 mb-2" class="text-center"  style={{ right:"100px" , width:600}} >
           
         <br></br><br></br>
           <input
@@ -135,7 +135,7 @@ handleTextSearch=(e)=>{
   </center>
       <table class="table table-white table-white">
       <thead>
-      <tr class="tableHeaders">
+      <tr class={myStyle.tableHeaders}>
            <th scope="col">Count</th>
            <th scope="col">Pack_Name</th>
            <th scope="col">Pack_ID</th>
@@ -155,7 +155,7 @@ handleTextSearch=(e)=>{
 
        {this.state.packages.map((packages,index)=>(
 
-        <tr class="rows4">
+        <tr class={myStyle.rows4}>
           <th scope="row">{index+1}</th>
           <td>{packages.name}</td>
           <td>{packages.packId}</td>
@@ -171,10 +171,10 @@ handleTextSearch=(e)=>{
 
           <td>
 
-          <div><a class="btnUpdate" href = {`/update/${packages._id}`}  style={{width:"200px"}}>Update</a> </div> 
+          <div><a class={myStyle.btnUpdate} href = {`/update/${packages._id}`}  style={{width:"200px"}}>Update</a> </div> 
                    
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               <a class="btnDelete"  onClick={()=>this.onDelete(packages._id)} style={{width:"200px"}}> Delete </a>&nbsp;&nbsp;&nbsp;
+               <a class={myStyle.btnDelete}  onClick={()=>this.onDelete(packages._id)} style={{width:"200px"}}> Delete </a>&nbsp;&nbsp;&nbsp;
         </td>
         </tr>
 

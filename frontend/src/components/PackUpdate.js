@@ -1,7 +1,7 @@
 import React,{useEffect, useState} from "react"
 import axios from "axios";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import "../style_sheets/Style.css";
+import myStyle from "../style_sheets/Style.module.css";
 import galle from '../img/Travelo.jpeg'
 
 
@@ -91,11 +91,11 @@ return(
           <div className="container">
            <br></br>
    <div style={{ position:"absolute", right:20,top:10}}> <div class="header3"><img class="logo" src={galle} style={{ position:"absolute", right:1280,top:15}} height={50} width={200}  alt="Card image cap"></img>
-     <a class="btnHome2" href="/man"  style={{ position:"absolute", right:120,top:20}}>Home</a>
+     <a class={myStyle.btnHome2} href="/man"  style={{ position:"absolute", right:120,top:20}}>Home</a>
      <div> <h1><strong><center>Update package details</center></strong></h1><br></br></div></div> </div>
     <br></br><br></br><br></br><br></br>
        
-      <form class="hh" className="form-group" style={{right:1200}}>
+      <form class={myStyle.hh} className="form-group" style={{right:1200}}>
          <div className="form-row" style={{width:"900px"}}>
                 <div className="form-group col-md-6">
                     <label htmlFor="inputEmail4">Package Name *</label>
@@ -128,7 +128,7 @@ return(
          
              </form>
              <form className="form-group" style={{width:"20px"}}>
-             <div style={{position:"absolute",top:100,right:250}} >
+             <div style={{position:"absolute",top:195,right:250}} >
               
                 <div className="form-group col-md-6" style={{width:"500px"}}>
                     <label htmlFor="inputDate">Hotel/Other</label>
@@ -182,14 +182,14 @@ return(
         
         </form>
              
-           <Link to="/all"><button class="btnBack" type="button">Back</button></Link>&nbsp;&nbsp;
-           <button class="btnUpdate2" onClick={updateData}>Update&nbsp;&nbsp;&nbsp;</button>&nbsp;&nbsp;
+           <Link to="/manage/AllPacks"><button class={myStyle.btnBack} type="button">Back</button></Link>&nbsp;&nbsp;
+           <button class={myStyle.btnUpdate2} onClick={updateData}>Update&nbsp;&nbsp;&nbsp;</button>&nbsp;&nbsp;
            
   
        <br></br><br></br>
       
      <div class="card-body" style={{ position:"absolute", right:14,top:600} }>
-  <h5 class="text-dark"><center><strong>Travelo</strong></center></h5>
+  
   <p class="text-white"><center>copyright @2020 Travelo All rights are reserved</center></p>
   </div>
   <div class="card-footer text-muted">
