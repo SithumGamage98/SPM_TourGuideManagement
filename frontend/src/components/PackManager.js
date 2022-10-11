@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import mana from '../img/boss.jpg'
 import { Link, useNavigate, useParams } from "react-router-dom";
-import "../style_sheets/Style.css";
+import myStyle from "../style_sheets/Style.module.css";
 import galle from '../img/Travelo.jpeg'
 
 
@@ -14,7 +14,7 @@ export default class manager extends Component {
     return (
 
       <div>
-       <div class="header2" style={{width:"1600px"}}> <h1 class="header"  style={{position:"inherit", top:"40px"}}><strong><center>Package Manager's Home Page</center></strong></h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <div class={myStyle.header2} style={{width:"1600px"}}> <h1 class="header"  style={{position:"inherit", top:"40px"}}><strong><center>Package Manager's Home Page</center></strong></h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
           <img class="logo"  src={galle} style={{ position:"absolute", right:1300,top:13}} height={50} width={200}  alt="Card image cap"></img>
@@ -29,7 +29,7 @@ export default class manager extends Component {
           top: 235,
         }} alt="Card image cap" />
 
-      <diV class="ManagerBody">
+      <diV class={myStyle.ManagerBody}>
         <div class="mangerInfo">
         <div class="card text-dark bg-light mb-3" style={{ width: "300px", position: 'absolute', right: 200, top: 250,}}>
           <div class="card-header"> <b>Hello..Mr.Gamage</b></div>

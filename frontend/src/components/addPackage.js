@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 //import React,{Component} from "react"
 import axios from "axios";
-import "../style_sheets/Style.css";
+import myStyle from "../style_sheets/Style.module.css";
 import galle from '../img/Travelo.jpeg'
 import create from '../img/Create package.jpg'
 
@@ -68,7 +68,7 @@ function AddPackage(){
     
     <form onSubmit={sendData}>
 
-    <img class="logo" src={galle} style={{ position:"absolute", right:1300,top:26}} height={50} width={200}  alt="Card image cap"></img>
+    <img class={myStyle.logo} src={galle} style={{ position:"absolute", right:1300,top:26}} height={50} width={200}  alt="Card image cap"></img>
     <a class="btnHome" href="/man"  style={{ position:"absolute", right:50,top:600}}>Home</a>
     <div class="header2"> <h1 class="header"><strong><center>Enter New Tour Package Details</center></strong></h1><br></br></div>
    
@@ -204,7 +204,7 @@ function AddPackage(){
        } }/>
      </div>
     </div>
-    <button type="submit" class="btnUpdate2" style={{width:"150px"}}><strong>&nbsp;Create</strong></button>&nbsp;
+    <button type="submit" class={myStyle.btnUpdate2} style={{width:"150px"}}><strong>&nbsp;Create</strong></button>&nbsp;
    
    </form><br></br>
 

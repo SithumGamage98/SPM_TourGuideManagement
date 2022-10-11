@@ -2,6 +2,7 @@ import React,{useState} from "react";
 //import React,{Component} from "react"
 import axios from "axios";
 import pic2 from '../img/Tboy.jpg'
+import myStyle from "../style_sheets/Style.module.css";
 
 
 
@@ -58,7 +59,7 @@ function CusPackage(){
     <form onSubmit={sendData} >
    
    
-     <a class="btnHomeFront" href="/find/cusPack"  style={{ position:"absolute", right:80,top:86}}>My packages</a>
+     <a class={myStyle.btnHomeFront} href="/find/cusPack"  style={{ position:"absolute", right:80,top:86}}>My packages</a>
      <img  src={pic2} height={400} width={600} style={{position:"absolute",top:300,right:20}} alt="Card image cap" />
     <div class="form-group col-md-6">
       <label for="uname"><strong>User name</strong></label>
@@ -172,8 +173,8 @@ function CusPackage(){
     
     </div><br></br>
    
-    <button class="btnSubmit" type="submit" style={{width:"250px"}}><strong><i className="fa-solid fa-folder-plus"></i>&nbsp;&nbsp;Create</strong></button>&nbsp;&nbsp;
-    <a href="/search/destination" class="btnBack"><strong>Back</strong></a>&nbsp;&nbsp;
+    <button class={myStyle.btnSubmit} type="submit" style={{width:"250px"}}><strong><i className="fa-solid fa-folder-plus"></i>&nbsp;&nbsp;Create</strong></button>&nbsp;&nbsp;
+    <a href="/search/destination" class={myStyle.btnBack}><strong>Back</strong></a>&nbsp;&nbsp;
     
    </form>
    </div>

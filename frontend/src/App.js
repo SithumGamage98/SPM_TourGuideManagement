@@ -252,6 +252,11 @@ const App = () => {
               component = {AllPacks} 
             />
 
+             <Route 
+              path= {["/update/:id"]}
+              component = {EditPack} 
+            />
+
             
 
  

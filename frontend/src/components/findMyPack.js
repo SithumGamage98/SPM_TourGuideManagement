@@ -3,6 +3,8 @@ import axios from "axios";
 import {Link} from 'react-router-dom';
 import tour from '../img/findPhoto.jpg'
 import '../App.css';
+import myStyle from "../style_sheets/Style.module.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 //import Package from "../../../TourPackage/BACKEND/models/Package";
 
@@ -105,7 +107,7 @@ handleTextSearch=(e)=>{
     <div>
       <div className="container" class="p-3 mb-2 bg-white">
       <img class="logo" src={tour} style={{ position:"absolute", right:100,top:300}} height={500} width={600}  alt="Card image cap"></img>
-      <h4 style={{ position:"absolute", right:1100,top:50}} class="PackDetails">Enter your user name</h4> <br></br><br></br><br></br>
+      <h4 style={{position:"absolute", right:1100,top:140}} class={myStyle.PackDetails}>Enter your user name</h4> <br></br><br></br><br></br>
      
       <div   style={{ position:"absolute",right:"500px", width:600}} >
           
@@ -127,16 +129,16 @@ handleTextSearch=(e)=>{
 
 <center>
   
-  <ul > <div class = "row row-cols-10 row-cols-md-2 g-4"> <div class="card4" >
-   <div class="SeeAllCuzPacks">
-    <li><div class="si">Name</div><div class="siname">{cusPacks.name}</div> </li>
-    <li class="list-group-item"><div class="si">Email</div><div class="userInputes">{cusPacks.email}</div></li>
-    <li class="list-group-item"><div class="si">Phone</div><div class="userInputes">{cusPacks.phone}</div></li>
-    <li class="list-group-item"><div class="si">Arriaval Date</div> <div class="userInputes">{cusPacks.arriDate}</div></li>
-    <li class="list-group-item"><div class="si">Pickup place</div><div class="userInputes">{cusPacks.pickPlace}</div></li>
-    <li class="list-group-item"><div class="si">Destination</div><div class="userInputes">{cusPacks.destination}</div></li>
-    <li class="list-group-item"><div class="si">Number of days</div><div class="userInputes">{cusPacks.NofDays}</div></li>
-    <li class="list-group-item"><div class="si">Notes</div><div class="userInputes">{cusPacks.notes}</div></li>
+  <ul > <div class = "row row-cols-10 row-cols-md-2 g-4"> <div class={myStyle.card4} >
+   <div class={myStyle.SeeAllCuzPacks}>
+    <li><div class="si">Name</div><div class={myStyle.siname}>{cusPacks.name}</div> </li>
+    <li class="list-group-item"><div class={myStyle.si}>Email</div><div class={myStyle.userInputes}>{cusPacks.email}</div></li>
+    <li class="list-group-item"><div class={myStyle.si}>Phone</div><div class={myStyle.userInputes}>{cusPacks.phone}</div></li>
+    <li class="list-group-item"><div class={myStyle.si}>Arriaval Date</div> <div class={myStyle.userInputes}>{cusPacks.arriDate}</div></li>
+    <li class="list-group-item"><div class={myStyle.si}>Pickup place</div><div class={myStyle.userInputes}>{cusPacks.pickPlace}</div></li>
+    <li class="list-group-item"><div class={myStyle.si}>Destination</div><div class={myStyle.userInputes}>{cusPacks.destination}</div></li>
+    <li class="list-group-item"><div class={myStyle.si}>Number of days</div><div class={myStyle.userInputes}>{cusPacks.NofDays}</div></li>
+    <li class="list-group-item"><div class={myStyle.si}>Notes</div><div class={myStyle.userInputes}>{cusPacks.notes}</div></li>
    
    
 </div>
@@ -152,7 +154,7 @@ handleTextSearch=(e)=>{
   </div>
 
   <p style={{ position:"absolute", right:100,top:760}}>If you want to change or delete your tour package,please contact package manager!</p>
-  <Link to="/all2" style={{ position:"absolute", right:300,top:800}}><button class="btnBack" type="button">Contact manager</button></Link>&nbsp;&nbsp;
+  <Link to="/all2" style={{ position:"absolute", right:300,top:800}}><button class={myStyle.btnBack} type="button">Contact manager</button></Link>&nbsp;&nbsp;
 
   <div class="card-body">
   <h5 class="text-dark"><center><strong>Travelo</strong></center></h5>
