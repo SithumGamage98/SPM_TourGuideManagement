@@ -191,7 +191,7 @@ setAmount(e.target.value);
    
    
 
-  <a href="/all" class="btn btn-primary" style={{marginTop:'20px' , width:'300px' ,marginLeft:'-20px',color:"white", marginRight:"10px",borderRadius:'20px'}}><strong>Get AllTourguides</strong></a>
+  <a href="/all/tourguide" class="btn btn-primary" style={{marginTop:'20px' , width:'300px' ,marginLeft:'-20px',color:"white", marginRight:"10px",borderRadius:'20px'}}><strong>Get AllTourguides</strong></a>
           
            
    
