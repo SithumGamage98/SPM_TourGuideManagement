@@ -9,6 +9,7 @@ import Profile from "./Profile";
 
 //import images from img directory
 import illustration from "../img/login-first.png";
+import underCons from "../img/underCons.svg";
 
 const UserProfile = (props) => {
     return (
@@ -18,9 +19,10 @@ const UserProfile = (props) => {
                 <div className={stylesProfile.side_bar}>
                     <Profile {...props} userId={props.userId}/>
                 </div>
-            <div className={stylesProfile.container}>
-                <h3 className="text-center">User profil!</h3>
-            </div>
+                <div className={`text-center ${stylesProfile.nocard}`} style={{width: "1000px", padding: "70px 0px 70px 0px"}}>
+                    <img src={underCons} alt="Logo" className={stylesProfile.illustration}/>
+                    <h4 className="text-center" style={{marginBottom: "30px", marginTop: "20px"}}><strong>Sorry! :( We are still working on this</strong></h4>
+                </div>
             </div>
         ) : (
             <>
