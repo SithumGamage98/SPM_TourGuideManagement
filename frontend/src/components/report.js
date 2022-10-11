@@ -96,6 +96,14 @@ export default class report extends Component {
     window.print();
 }
 
+Print = () =>{
+   let printContents = document.getElementById('printablediv').innerHTML;
+   let originalContents = document.body.innerHTML;
+   document.body.innerHTML = printContents;
+   window.print();
+  document.body.innerHTML = originalContents; 
+}
+
    render() {
 
   
@@ -220,7 +228,7 @@ export default class report extends Component {
 
 
         <div class=" text-center ">
-             < font face = "Comic sans MS" size = "8" class="pb-2  "  > <strong>Print Hotel Details </strong> </font>
+             < font face = "Comic sans MS" size = "8" class="pb-2  " style={{fontFamily:"sans-serif"}} > <strong>Print Hotel Details </strong> </font>
         
   
          <section class=" p-3" style={{backgroundColor:"#fff"}}>
@@ -228,7 +236,7 @@ export default class report extends Component {
            
             
            
-            <div class = "table-responsive" >
+            <div id= "printablediv" class = "table-responsive" >
   
             <table className={styles.content_table} >
                <thead className = {styles.dark}>
@@ -275,7 +283,7 @@ export default class report extends Component {
             </table>
     
     
-            <button class={styles.btn_table2} onClick={this.repotGen}>print</button>
+            <button class={styles.btn_table2} onClick={this.Print}>print</button>
             </div>
 
        

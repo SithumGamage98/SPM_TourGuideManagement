@@ -3,7 +3,8 @@ const { aggregate } = require("../models/Hotel");
 let Hotel = require("../models/Hotel");
 
 router.route("/add").post((req, res)=>{
-    
+
+    //save the data to DB
     const name= req.body.name;
     const type = req.body.type;
     const location = req.body.location;
@@ -19,6 +20,7 @@ router.route("/add").post((req, res)=>{
 
     })
 
+    //object that we created, pass as data 
     newHotel.save().then(()=>{
         res.json("hotel Added")
     }).catch((err)=>{
@@ -27,7 +29,7 @@ router.route("/add").post((req, res)=>{
     })
 })
 
-
+//display details
 router.get('/all',(req,res)=>{
 
     Hotel.find().exec((err,hotels)=>{

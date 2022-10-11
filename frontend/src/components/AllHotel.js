@@ -218,7 +218,7 @@ export default class AllHotel extends Component {
                   </div>
                   {/* table */}
                   <div class= {`text-center ${styles.table_responsive}`}>
-                     < font face="Comic sans MS" size="6" class="pb-1  "  > <strong>All hotels Details </strong> </font>
+                     < font face="Comic sans MS" size="6" class="pb-1  " style={{fontFamily:"sans-serif"}} > <strong>All hotels Details </strong> </font>
 
                      <section class="p-3" style={{ backgroundColor: "#fff", width: "1500px" }} >
 

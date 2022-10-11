@@ -221,7 +221,7 @@ export default function EditResturant() {
 
 <section className={styles.recent} >
 <div className={styles.activityCard}>
-    <h3>Add Hotel Details</h3>
+    <h3>Update Hotel Details</h3>
 
 <div className={styles.container}>
 
