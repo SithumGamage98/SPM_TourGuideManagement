@@ -184,7 +184,7 @@ filterContent(tourguides,searchTerm){
 
 
           <td>
-          <a className="btn btn-dark" style={{color:"white"}} href={`/update/${tourguides._id}`}>Update</a>&nbsp;
+          <a className="btn btn-success" style={{color:"white"}} href={`/update/tourguide/${tourguides._id}`}>Update</a>&nbsp;
             
              </td>
              

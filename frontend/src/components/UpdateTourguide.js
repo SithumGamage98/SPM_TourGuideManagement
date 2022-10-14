@@ -210,7 +210,7 @@ return(
          
     < button type="button" class="btn btn-primary" style={{marginTop:'20px' , width:'300px' ,marginRight:'300px',marginLeft:'200px',borderRadius:'20px',color:'white'}}  onClick={updateData}><strong>Update Tourguide Details</strong></button>
     
-    <a href="/all" class="btn btn-primary" style={{marginTop:'20px' , width:'300px' ,marginLeft:'-20px',color:"white",borderRadius:'20px'}}><strong>Get Updated Tourguides</strong></a>
+    <a href="/all/tourguide" class="btn btn-primary" style={{marginTop:'20px' , width:'300px' ,marginLeft:'-20px',color:"white",borderRadius:'20px'}}><strong>Get Updated Tourguides</strong></a>
     
     </div>
     </div>

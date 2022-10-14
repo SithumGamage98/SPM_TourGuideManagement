@@ -37,6 +37,7 @@ import CusPackage from './components/customizePackage';
 import findMyPack from './components/findMyPack';
 import AllPacks from './components/AllPacks';
 import EditPack from './components/PackUpdate'
+import guidereport from './components/guidereport';
 
 
 
@@ -253,9 +254,15 @@ const App = () => {
             />
 
              <Route 
-              path= {["/update/:id"]}
+              path= {["/update/packs/id"]}
               component = {EditPack} 
             />
+            <Route exact path= {["/guidereport"]} component = {guidereport} />
+  
+  <Route 
+  path ="/guidereport"
+  component={guidereport}
+/>
 
             
 
