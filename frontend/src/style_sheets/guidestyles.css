@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500&display=swap");
+
+body{
+  background-color:#ffffff;
+   /* #333145; */
+}
+
+h2{
+  text-align:center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size:60px;
+  color: #000000;
+   /* rgb(158, 131, 131); */
+
+}
+h3{
+  text-align:left;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size:40px;
+  color: rgb(230, 197, 197);
+
+}
+.container-tour {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-gap: 50px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  top: 400px;
+  
+  font-family: 'Baloo Paaji 2', cursive;
+}
+
+.card-tourguide {
+  background-color: #272135;
+  height: 37rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.7);
+  color: rgb(255, 255, 255);
+}
+
+.card__name-tour {
+  margin-top: 15px;
+  font-size: 1.5em;
+}
+
+.card__image-tour {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  border: 5px solid #252329;
+  margin-top: 20px;
+  box-shadow: 0 10px 50px rgba(235, 25, 110, 1);
+}
+
+
+.draw-border-tour {
+  box-shadow: inset 0 0 0 4px #58cdd1;
+  color: #58afd1;
+  -webkit-transition: color 0.25s 0.0833333333s;
+  transition: color 0.25s 0.0833333333s;
+  position: relative;
+  width: 70%;
+  font-size: 30px;
+}
+
+.draw-border-tour::before,
+.draw-border-tour::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  width: 0rem;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.draw-border-tour::before {
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+}
+
+.draw-border-tour::after {
+  border-top-width: 4px;
+  border-right-width: 4px;
+}
+
+.draw-border-tour:hover {
+  color: #ffe593;
+}
+
+.draw-border-tour:hover::before,
+.draw-border-tour:hover::after {
+  border-color: #eb196e;
+  -webkit-transition: border-color 0s, width 0.25s, height 0.25s;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+
+.draw-border-tour:hover::before {
+  -webkit-transition-delay: 0s, 0s, 0.25s;
+  transition-delay: 0s, 0s, 0.25s;
+}
+
+.draw-border-tour:hover::after {
+  -webkit-transition-delay: 0s, 0.25s, 0s;
+  transition-delay: 0s, 0.25s, 0s;
+}
+
+.btn-tour {
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font: 700 1.2rem 'Roboto Slab', sans-serif;
+  padding: 0.75em 2em;
+  letter-spacing: 0.05rem;
+  margin: 1em;
+  width: 13rem; 
+}
+
+.btn-tour:focus {
+  outline: 2px dotted #55d7dc;
+}
+
+
+.social-icons-tour {
+  padding: 0;
+  list-style: none;
+  margin: 1em;
+}
+
+.social-icons-tour li {
+  display: inline-block;
+  margin: 0.15em;
+  position: relative;
+  font-size: 1em;
+}
+
+.social-icons-tour i {
+  color: #fff;
+  position: absolute;
+  top: 0.95em;
+  left: 0.96em;
+  transition: all 265ms ease-out;
+}
+
+.social-icons-tour a {
+  display: inline-block;
+}
+
+.social-icons-tour a:before {
+  transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  content: " ";
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  display: block;
+  background: linear-gradient(45deg, #ff003c, #c648c8);
+  transition: all 265ms ease-out;
+}
+
+.social-icons-tour a:hover:before {
+  transform: scale(0);
+  transition: all 265ms ease-in;
+}
+
+.social-icons-tour a:hover i {
+  transform: scale(2.2);
+  -ms-transform: scale(2.2);
+  -webkit-transform: scale(2.2);
+  color: #ff003c;
+  background: -webkit-linear-gradient(45deg, #ff003c, #c648c8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 265ms ease-in;
+}
+
+.grid-container-tour {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  font-size: 1.2em;
+}
+
+
+
+
+/* CSS */
+.button-71 {
+  background-color: #4939c4;
+  border: 0;
+  border-radius: 56px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  outline: 0;
+  padding: 16px 21px;
+  position:relative;
+  text-align:center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 950px;
+  margin-left: 370px;
+  width: 600px;
+  height: 50px;
+  line-height: 0.4;
+  
+}
+
+.button-71:before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  width: 600px;
+}
+
+.button-71:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.15);
+}
+
+
+@media (min-width: 768px) {
+  .button-71 {
+    padding: 16px 48px;
+  }
+}
+.Travel{
+  height:5px;
+    width: 1000px;
+    position:relative;
+    left: 190px;
+    margin-top:50px;
+}

@@ -1,0 +1,61 @@
+.si{
+
+
+    font-weight: bold;
+    font-size:larger;
+    color:#4468E2;
+  
+  }
+  .SeeAllCuzPacks{
+
+
+    box-shadow: rgba(96, 81, 81, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
+    border-radius: 30px;
+    border-bottom-right-radius: 4em;
+    background-clip: inherit;
+    background-color: #f0e3e3;
+    backface-visibility: visible;
+    border-color: #050313;
+    color:#4468E2;
+   position:relative;
+   top: 88px;
+
+    
+
+  }
+  .ImageFile{
+    height: 30px;
+    width: 800px;
+    position:relative;
+    left: 240px;
+    margin-top:80px;
+  }
+  .Searchbar{
+    width:600px;
+    border-radius:50px;
+    
+    position:relative;
+    margin-top: 500px;
+    left: 350px;
+    right: 500px;
+
+
+  }
+  .search{
+    position: relative;
+    top:540px;
+    font-size: medium;
+    left: 80px;
+  }
+
+    h2{
+      text-align:center;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size:60px;
+      color: #000000;
+       /* rgb(158, 131, 131); */
+    
+    }
+
+  
+ 
