@@ -79,6 +79,26 @@ export default class ViewHotel extends Component {
 
 
 
+   filterContent(_hotels,searchTerm){
+
+      const results=_hotels.filter((hotels)=>hotels.type.toLowerCase().includes(searchTerm));
+      this.setState({hotels:results});
+   
+   }
+   
+   
+    
+    handleTextSearch=(e)=>{
+   
+       const searchTerm=e.currentTarget.value;
+       axios.get("http://localhost:8070/hotel/all").then(res=>{
+   
+        if(res.data.success){
+           this.filterContent(res.data.existingHotels,searchTerm)
+        }
+    });
+   
+   }; 
 
 
 
@@ -141,6 +161,15 @@ export default class ViewHotel extends Component {
 
 <section  className={styles.offer} >
     <div  className={styles.container}>
+
+      
+    <input
+                className="form-control"
+                type="search"
+                placeholder="Search type of hotel"
+                name="searchTerm"
+                onChange={this.handleTextSearch}>
+</input>
       <div  className={styles.heading}>
       <h1>Our <span>Rooms</span></h1>
       </div>
@@ -171,7 +200,7 @@ export default class ViewHotel extends Component {
             </button> */}
 
             <Link to="/insert/hotel" type="submit" className={styles.flex1} >
-            <span>Check Availability</span>
+            <span>Resevation</span>
            <i className={styles.logo3}><FaArrowAltCircleRight/></i>
            </Link>
           </div>

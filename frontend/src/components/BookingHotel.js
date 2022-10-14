@@ -85,7 +85,7 @@ return (
 
                      <div className="col-lg-3 mb-3">
                          <label class="form-label" className={styles.label}>No Of Guest</label>
-                            <input type="text" style={{height: "50px"}} class="form-control shadow-none" id="name" placeholder="Enter name"
+                            <input type="text" style={{height: "50px"}} class="form-control shadow-none" id="name" placeholder="Enter No Of Guest"
                              onChange ={(e) => {
                              setno_of_guest(e.target.value)
                               }}/>
@@ -95,7 +95,7 @@ return (
 
                      <div className="col-lg-2 mb-3">
                          <label class="form-label" className={styles.label}>No Of Rooms</label>
-                            <input type="text" style={{height: "50px"}} class="form-control shadow-none" id="name" placeholder="Enter name"
+                            <input type="text" style={{height: "50px"}} class="form-control shadow-none" id="name" placeholder="Enter No Of Rooms"
                              onChange ={(e) => {
                              setno_of_rooms(e.target.value)
                               }}/>

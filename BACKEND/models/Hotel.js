@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
 
+//create variable of schema 
 const Schema = mongoose.Schema;
 const hotelSchema = new Schema({
     name:{
         type : String,
-        required: true
+        required: true //backend validation
         
     },
     type:{
